@@ -17,13 +17,14 @@
 - Use bind to create a new method bound to an object context
 - Use apply/call to execute a method in a different context
 
-TODO: Fix Framing
+## Framing (5 / 05)
+[// Todo]: # ( Framing needs to be overhauled )
 
-This lesson will cover two concepts that are crucial to writing strong, robust code and understanding Javascript: Objects and Context. These concepts are also commonly covered in interview questions, since they factor into how we write and organize our code or simply put, how we decide where to put things.
+This lesson will cover two concepts that are crucial for encapsulation and abstraction in Javascript: Objects and Context. Objects allow us to box up multiple functions and data under a single variable. Context is similar to scope.
 
 To explore these concepts we will be looking at a series of examples that unveil the mechanics of scope and context. Through comparing and contrasting code examples look that seem similar yet contain important differences, we'll highlight how scope and context operate in Javascript. The examples ultimately aim to illustrate that the way that code is written and structured affects ***how and where its program data (its variables or references) can be accessed***.
 
-TODO: Double-check Objects section time. Markings claim it's ~85 mins
+[// Todo]: # (Double-check Objects section time. Markings claim it's ~85 mins)
 
 ## [Objects](objects.md) (60 / 150)
 
