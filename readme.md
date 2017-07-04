@@ -26,7 +26,7 @@ To explore these concepts we will be looking at a series of examples that unveil
 
 [// Todo]: # (Double-check Objects section time. Markings claim it's ~85 mins)
 
-## Intro to Objects (5 / 00)
+## Intro to Objects (5 / 10)
 
 Before we start to talk about objects, let's visit a site some of you may be familiar with,
 [Amazon](https://www.amazon.com). If we type in some random thing to search for you'll notice all the results have similar properties. Things like, price, title, reviews, Prime eligibility and picture.
@@ -49,7 +49,7 @@ Objects are a complex data type - usually referred to as an *unordered* list (or
 
 > In the above example, the variable `car` points to an object literal. This particular object has 3 properties: `make`, `model` and `year`.
 
-### Turn and Jot: Model WDI Student (5 / 00)
+### Turn and Jot: Model WDI Student (5 / 15)
 
 You're goal is to pseudo-code an object literal:
 
@@ -57,7 +57,7 @@ You're goal is to pseudo-code an object literal:
 * Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
 * **Bonus - One key value pair contains an array**
 
-### You DO: Interacting with Objects (30 / 00)
+### You DO: Interacting with Objects (30 / 45)
 
 **Read through the below, and then complete the exercise with your partner**
 
@@ -150,7 +150,7 @@ Create a variable named `wdiStudent` and assign it to an object literal.
 
 > [Solution](https://gist.github.com/nolds9/efdb0a320e7143f42e96)
 
-### Nested Collections (5 / 00)
+### Nested Collections (5 / 50)
 
 Object properties aren't limited to simple data types. We can also nest collections inside of collections.
 
@@ -177,9 +177,9 @@ var car = {
 * "Neutral" (i.e., array value within an object)?
 * "6 horses" (i.e., object value within an object)?
 
-### Break (10 / 00)
+### Break (10 / 1:00)
 
-## Methods (15 / 00)
+## Methods (15 / 1:15)
 
 Methods are functions that are attached to some object.
 
@@ -217,7 +217,7 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 > If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
 
 ### Bonus
-### You Do: Big Ol' Twitter Object (15 / 00)
+### You Do: Big Ol' Twitter Object (15 / 1:30)
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 * Follow the link below and answer the questions in bold.
@@ -226,20 +226,11 @@ As this course continues you will encounter plenty of Javascript objects in the 
 
 [Twitter JSON Exercise](https://github.com/ga-dc/big_ole_twitter_object)
 
-## Break (10 / 00)
+## Break (10 / 1:40)
 
 # Context
 
-## Learning Objectives
-
-- Explain Javascript 'context' and what the value of the 'this' keyword refers to
-- Explain what the default context of Javascript executing in the browser is
-- Use the 'this' keyword to set and retrieve a property in a Javascript function
-- Use bind to create a new method bound to an object context
-- Use apply/call to execute a method in a different context
-
-
-## What is Context? (20 / 00)
+## What is Context? (20 / 2:00)
 
 In Javascript, context tells us where functions are invoked.
 
@@ -391,7 +382,7 @@ user.isSignedIn // => false
 -
 ```
 
-## Other `this` Cases (10 / 00)
+## Other `this` Cases (10 / 2:10)
 
 ### Events
 
@@ -452,7 +443,7 @@ fruits.forEach(function(currentFruit) {
 
 Note that it is very rare to intentionally use `this` to refer to the window object. Usually this happens when we mistakenly use this incorrectly (a very easy/common mistake for new and even experienced JS developers).
 
-## You Do: Write, Pair, Share (5 / 00)
+## You Do: Write, Pair, Share (5 / 2:15)
 
 Consider the following example...
 
@@ -504,7 +495,7 @@ Note that this issue frequently appears anytime we use a callback / anonymous fu
 * using `forEach()` or other iteration functions
 * for event listeners passed into `someElement.addEventListener()`
 
-## Fixing the Global `this` Gotcha (5 / 00)
+## Fixing the Global `this` Gotcha (5 / 2:20)
 
 One trick is to store the `this` you want in another variable, commonly named `self` or `that`.
 
@@ -523,7 +514,7 @@ var instructor = {
 instructor.displayFoods();
 ```
 
-## You Do: Test Your Context Knowledge (15 / 00)
+## You Do: Test Your Context Knowledge (15 / 2:35)
 
 > 10 minutes exercise. 5 minutes review.
 
