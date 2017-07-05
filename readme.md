@@ -610,6 +610,10 @@ instructor.displayFoods();
 
 [More information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
+> Note: Arrow functions are an exception, they get `this` defined once at execution time. Using `bind`, `apply`, or `call` to try and change the context won't result in an error, but the context stays the same. 
+>
+> `() => {}`
+
 ### Call
 
 ```js
