@@ -195,10 +195,10 @@ var car = {
 
   // Methods can take arguments
   gps: function( location ){
-    console.log( "Beep boop, driving to " + location );
+    console.log( `Beep boop, driving to ${location}` );
   },
   paint: function( newColor ){
-    console.log( "Your car has been painted " + newColor );
+    console.log( `Your car has been painted ${newColor}` );
     car.color = newColor;
   }
 }
@@ -206,7 +206,7 @@ var car = {
 // We can run the car's two methods like so...
 car.drive();
 car.paint( "blue" );
-console.log( "Car color is: " + car.color );
+console.log( `Car color is: ${car.color}` );
 ```
 
 With methods as part of our Javascript toolbox, we now have a cool interface with which we can interact with our objects.
@@ -260,7 +260,7 @@ Here's an example of the most common way context is determined for a function. W
 var user = {
   firstName: "John",
   sayName: function(){
-      alert("My name is " + this.firstName + ".");
+      alert(`My name is ${this.firstName}.`);
   }
 }
 user.sayName();
@@ -292,7 +292,7 @@ var instructor = {
   fullName: "Nayana Davis",
   favoriteFood: "Fried Chicken",
   sayHello: function(){
-    console.log('Hi my name is ' + this.fullName + ' and my favorite food is ' + this.favoriteFood)
+    console.log(`Hi my name is ${this.fullName} and my favorite food is ${this.favoriteFood}.`)
   }
 }
 
@@ -368,7 +368,7 @@ var user = {
     this.isSignedIn = false
   },
   greetUser: function() {
-    console.log("Welcome back " + this.userName)
+    console.log(`Welcome back ${this.userName}`)
   }
 }
 
@@ -433,11 +433,11 @@ fruits.forEach(function(){
 var fruits = ["apples", "bananas", "cherries"];
 
 for(var i = 0; i < fruits.length; i++) {
-  console.log("Every day I eat two " + fruits[i]);
+  console.log(`Every day I eat two ${fruits[i]}`);
 }
 
 fruits.forEach(function(currentFruit) {
-  console.log("Every day I eat two " + currentFruit)
+  console.log(`Every day I eat two ${currentFruit}`)
 });
 ```
 
@@ -453,7 +453,7 @@ var instructor = {
   favoriteFoods: ["Ramen", "Capn Crunch", "Tacos"],
 
   displayFoods: function() {
-    console.log("Things " + this.fullName + " likes:")
+    console.log(`Things ${this.fullName} likes:`)
     this.favoriteFoods.forEach(function(food) {
       console.log(food);
     })
@@ -475,7 +475,7 @@ var instructor = {
 
   displayFoods: function() {
     this.favoriteFoods.forEach(function(food) {
-      console.log(this.fullName + " likes " + food);
+      console.log(`${this.fullName} likes ${food}`);
     })
   }
 
@@ -506,7 +506,7 @@ var instructor = {
   displayFoods: function() {
     var self = this;
     this.favoriteFoods.forEach(function(food) {
-      console.log(self.fullName + " likes " + food);
+      console.log(`${self.fullName} likes ${food}`);
     })
   }
 }
@@ -616,7 +616,7 @@ var instructor = {
   favoriteFoods: ["Ramen", "Cap'n Crunch", "Tacos"],
   displayFoods: function() {
     this.favoriteFoods.forEach(function(food) {
-      console.log(this.name + " likes " + food);
+      console.log(`${this.name} likes ${food}`);
     }.bind(this))
   }
 }
@@ -630,7 +630,7 @@ instructor.displayFoods();
 
 ```js
 function sayHello() {
-  console.log("Hi! My name is " + this.name);
+  console.log(`Hi! My name is ${this.name}`);
 }
 
 var person = {name: "Manatee the Railyard Toreador"};
@@ -643,7 +643,7 @@ sayHello.call(cat);
 
 ```js
 function sayHello(favColor) {
-  console.log("Hi! My name is " + this.name + " and I like " + favColor);
+  console.log(`Hi! My name is ${this.name} and I like ${favColor}`);
 }
 
 var person = {name: "Manatee the Railyard Toreador"};
