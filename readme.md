@@ -18,13 +18,10 @@
 - Use apply/call to execute a method in a different context
 
 ## Framing (5 / 05)
-[// Todo]: # ( Framing needs to be overhauled )
 
 This lesson will cover two concepts that are crucial for encapsulation and abstraction in Javascript: Objects and Context. Objects allow us to box up multiple functions and data under a single variable. Context determines which object "owns" a function while it's being invoked.
 
 To explore these concepts we will be discussing why we might need/want to use objects in our code. We'll learn how to create, access and alter objects. Then looking at Context, we'll see how all function invocations always bring along a hidden object via the keyword `this`. and how we can attach our own or other objects to the `this` keyword.
-
-[// Todo]: # (Double-check Objects section time. Markings claim it's ~85 mins)
 
 ## Intro to Objects (5 / 10)
 
@@ -177,9 +174,9 @@ var car = {
 * "Neutral" (i.e., array value within an object)?
 * "6 horses" (i.e., object value within an object)?
 
-### Break (10 / 1:00)
+[//]: # ( Removed 10 minute break )
 
-## Methods (15 / 1:15)
+## Methods (15 / 1:05)
 
 Methods are functions that are attached to some object.
 
@@ -217,7 +214,7 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 > If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
 
 ### Bonus
-### You Do: Big Ol' Twitter Object (15 / 1:30)
+### You Do: Big Ol' Twitter Object (15 / 1:20)
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 * Follow the link below and answer the questions in bold.
@@ -226,11 +223,11 @@ As this course continues you will encounter plenty of Javascript objects in the 
 
 [Twitter JSON Exercise](https://github.com/ga-dc/big_ole_twitter_object)
 
-## Break (10 / 1:40)
+## Break (10 / 1:30)
 
 # Context
 
-## What is Context? (20 / 2:00)
+## What is Context? (20 / 1:50)
 
 In Javascript, context tells us where functions are invoked.
 
@@ -382,7 +379,7 @@ user.isSignedIn // => false
 -
 ```
 
-## Other `this` Cases (10 / 2:10)
+## Other `this` Cases (10 / 2:00)
 
 ### Events
 
@@ -443,7 +440,7 @@ fruits.forEach(function(currentFruit) {
 
 Note that it is very rare to intentionally use `this` to refer to the window object. Usually this happens when we mistakenly use this incorrectly (a very easy/common mistake for new and even experienced JS developers).
 
-## You Do: Write, Pair, Share (5 / 2:15)
+## You Do: Write, Pair, Share (5 / 2:05)
 
 Consider the following example...
 
@@ -495,7 +492,7 @@ Note that this issue frequently appears anytime we use a callback / anonymous fu
 * using `forEach()` or other iteration functions
 * for event listeners passed into `someElement.addEventListener()`
 
-## Fixing the Global `this` Gotcha (5 / 2:20)
+## Fixing the Global `this` Gotcha (5 / 2:10)
 
 One trick is to store the `this` you want in another variable, commonly named `self` or `that`.
 
@@ -514,7 +511,7 @@ var instructor = {
 instructor.displayFoods();
 ```
 
-## You Do: Test Your Context Knowledge (15 / 2:35)
+## You Do: Test Your Context Knowledge (15 / 2:25)
 
 > 10 minutes exercise. 5 minutes review.
 
@@ -693,7 +690,7 @@ Note that #1 is included here for correctness, we haven't covered object constru
 
 [Javascript Calculator](https://github.com/ga-dc/js-calculator)
 
-## Closing, Q&A, Review LO's (10 / 00)
+## Closing, Q&A, Review LO's (10 / 2:35)
 
 1. Does a function need an input, output, and side-effect to work?
 2. What's difference between calling and referencing a function?
