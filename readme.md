@@ -20,9 +20,9 @@
 ## Framing (5 / 05)
 [// Todo]: # ( Framing needs to be overhauled )
 
-This lesson will cover two concepts that are crucial for encapsulation and abstraction in Javascript: Objects and Context. Objects allow us to box up multiple functions and data under a single variable. Context is similar to scope.
+This lesson will cover two concepts that are crucial for encapsulation and abstraction in Javascript: Objects and Context. Objects allow us to box up multiple functions and data under a single variable. Context determines which object "owns" a function while it's being invoked.
 
-To explore these concepts we will be looking at a series of examples that unveil the mechanics of scope and context. Through comparing and contrasting code examples look that seem similar yet contain important differences, we'll highlight how scope and context operate in Javascript. The examples ultimately aim to illustrate that the way that code is written and structured affects ***how and where its program data (its variables or references) can be accessed***.
+To explore these concepts we will be discussing why we might need/want to use objects in our code. We'll learn how to create, access and alter objects. Then looking at Context, we'll see how all function invocations always bring along a hidden object via the keyword `this`. and how we can attach our own or other objects to the `this` keyword.
 
 [// Todo]: # (Double-check Objects section time. Markings claim it's ~85 mins)
 
