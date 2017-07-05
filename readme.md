@@ -34,8 +34,8 @@ In JavaScript, objects are collections of properties(key-value pairs). We can ad
 
 ```js
 var car = {
-  make: "Honda",
-  model: "Civic",
+  make: 'Honda',
+  model: 'Civic',
   year: 1997
 }
 ```
@@ -64,28 +64,28 @@ We already saved a sample object to a `car` variable. We did this using **object
 
 ```js
 var car = {
-  make: "Honda",
-  model: "Civic",
+  make: 'Honda',
+  model: 'Civic',
   year: 1997,
 
   // NOTE: Keys with a "-" in their name must be surrounded by quotation marks.
-  "tire-type": "Goodyear"
+  'tire-type': 'Goodyear'
 }
 ```
 
 #### Read
 
-To access object properties, we use either dot (`.property`) or bracket (`["property"]`) notation.
+To access object properties, we use either dot (`.property`) or bracket (`['property']`) notation.
 
 ```js
 console.log( car.make );
-console.log( car["make"] );
+console.log( car['make'] );
 
 // What happens when we try to access a property yet to be defined?
 console.log( car.owner )
 
 // NOTE: When accessing properties whose keys have a "-" in them, you must use bracket notation.
-console.log( car["tire-type"] );
+console.log( car['tire-type'] );
 ```
 
 #### Update
@@ -586,20 +586,7 @@ Read through the bonus section of this lesson plan, paying attention to the `bin
 
 Also [take a look at this repo](https://github.com/ga-wdi-exercises/js_context_and_this/), which compares good and bad ways to apply context. We suggest reading up on `bind`, `call` and `apply` before doing so, however, since the examples make use of some of these methods.
 
-## Peek Ahead: OOP Javascript
-
-Often we have multiple pieces of data in our program that share the same structure. Think flash cards, trivia cards, bank accounts, etc.
-
-In the future, we'll make these objects using "constructors" (think templates for each type), but then we need a way to talk about the structure in general. Context is a very necessary tool to accomplish this.
-
-An example of what this might look like:
-
-[ATM.js](https://github.com/ga-wdi-exercises/atm/blob/solution/solution/js/src/atm.js)
-[Tunr Song Model](https://github.com/ga-wdi-exercises/tunr_node_oojs/blob/oojs_cud/public/js/models/artist.js)
-
--------
-
-## Bind, Call and Apply (Bonus)
+## You Do: Bind, Call and Apply (Bonus)
 
 There are two other ways to invoke a function and change the context, which are very similar: `bind`, `call`, and `apply`.
 
@@ -609,8 +596,8 @@ These let you "force" `this` to be something specific.
 
 ```js
 var instructor = {
-  name: "Angel Valant",
-  favoriteFoods: ["Ramen", "Cap'n Crunch", "Tacos"],
+  name: 'Angel Valant',
+  favoriteFoods: ['Ramen', 'Cap\'n Crunch', 'Tacos'],
   displayFoods: function() {
     this.favoriteFoods.forEach(function(food) {
       console.log(`${this.name} likes ${food}`);
@@ -630,8 +617,8 @@ function sayHello() {
   console.log(`Hi! My name is ${this.name}`);
 }
 
-var person = {name: "Manatee the Railyard Toreador"};
-var cat = {name: "Hobbles McGillicudy"};
+var person = {name: 'Manatee the Railyard Toreador'};
+var cat = {name: 'Hobbles McGillicudy'};
 sayHello.call(person);
 sayHello.call(cat);
 ```
@@ -643,10 +630,10 @@ function sayHello(favColor) {
   console.log(`Hi! My name is ${this.name} and I like ${favColor}`);
 }
 
-var person = {name: "Manatee the Railyard Toreador"};
-var cat = {name: "Hobbles McGillicudy"};
-sayHello.call(person, "blue");
-sayHello.call(cat, "peachpuff");
+var person = {name: 'Manatee the Railyard Toreador'};
+var cat = {name: 'Hobbles McGillicudy'};
+sayHello.call(person, 'blue');
+sayHello.call(cat, 'peachpuff');
 ```
 
 [More information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
@@ -679,12 +666,16 @@ Note that #1 is included here for correctness, we haven't covered object constru
 >
 > Source: [You-Dont-Know-JS/ch2.md](https://github.com/getify/You-Dont-Know-JS/blob/58dbf4f867be0d9c51dfc341765e4e4211608aa1/this%20&%20object%20prototypes/ch2.md)
 
-## References
+## Peek Ahead: OOP Javascript
 
-* [Understanding Scope and Context in JavaScript](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
-* [Understand JavaScript’s “this”](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/)
-* [Everything you wanted to know about JavaScript scope](http://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
+Often we have multiple pieces of data in our program that share the same structure. Think flash cards, trivia cards, bank accounts, etc.
 
+In the future, we'll make these objects using "constructors" (think templates for each type), but then we need a way to talk about the structure in general. Context is a very necessary tool to accomplish this.
+
+An example of what this might look like:
+
+[ATM.js](https://github.com/ga-wdi-exercises/atm/blob/solution/solution/js/src/atm.js)
+[Tunr Song Model](https://github.com/ga-wdi-exercises/tunr_node_oojs/blob/oojs_cud/public/js/models/artist.js)
 
 ## HW: Calculator
 
@@ -692,11 +683,13 @@ Note that #1 is included here for correctness, we haven't covered object constru
 
 ## Closing, Q&A, Review LO's (10 / 2:35)
 
-1. Does a function need an input, output, and side-effect to work?
-2. What's difference between calling and referencing a function?
-3. What's difference between function expressions and declarations?
-4. How are objects like dictionaries?
-5. What's difference between a property and a method?
+1. How are objects like dictionaries?
+2. What's difference between a property and a method?
+3. What is the keyword which references a function/method context?
+4. What is the default context for a function in the browser?
+5. From inside an object's method, how do we retrieve a property from the containing object?
+
+-------
 
 ## Further Reading / Resources
 
@@ -705,3 +698,7 @@ Note that #1 is included here for correctness, we haven't covered object constru
 * [Secrets of the Javascript Ninja](http://webandbeer.com.ar/wp-content/uploads/2014/11/SecretsOfTheJavaScriptNinja.pdf)
 * [JS for Cats](http://jsforcats.com/)
 * [CoderByte Challenges](https://coderbyte.com/challenges/)
+
+* [Understanding Scope and Context in JavaScript](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
+* [Understand JavaScript’s “this”](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/)
+* [Everything you wanted to know about JavaScript scope](http://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
