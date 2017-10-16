@@ -207,7 +207,6 @@ console.log( `Car color is: ${car.color}` );
 ```
 
 With methods as part of our Javascript toolbox, we now have a cool interface with which we can interact with our objects.
-* Why would custom methods be a preferred way to modify object properties vs. using object literal notation?
 
 We've only scratched the surface for objects. We're going to dive much deeper into them later on in the course.
 
@@ -610,7 +609,7 @@ instructor.displayFoods();
 
 [More information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
 
-> Note: Arrow functions are an exception, they get `this` defined once at execution time. Using `bind`, `apply`, or `call` to try and change the context won't result in an error, but the context stays the same. 
+> Note: Arrow functions are an exception, they get `this` defined once at execution time. Using `bind`, `apply`, or `call` to try and change the context won't result in an error, but the context stays the same.
 >
 > `() => {}`
 
