@@ -243,7 +243,7 @@ We use `this` similar to the way we use pronouns in natural languages like Engli
 We could have written this:
 
 ```
-“John bites an apple.  *This* tastes good”
+“John bites an apple.  This tastes good”
 ```
 
 In a similar manner, we use the `this` keyword as a replacement for the subject in question.
