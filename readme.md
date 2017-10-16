@@ -237,13 +237,13 @@ Every time a Javascript function is called, a context is determined / set. That 
 We use `this` similar to the way we use pronouns in natural languages like English and French. Say we write:
 
 ```
- “John is running fast because he is trying to catch the train.”
+ “John bites an apple.  The apple tastes good”
 ```
 
 We could have written this:
 
 ```
-“John is running fast because John is trying to catch the train.”
+“John bites an apple.  *This* tastes good”
 ```
 
 In a similar manner, we use the `this` keyword as a replacement for the subject in question.
