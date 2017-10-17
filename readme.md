@@ -176,7 +176,7 @@ var car = {
 
 [//]: # ( Removed 10 minute break )
 
-## Methods (15 / 1:05)
+## Methods (15 / 11:05)
 
 Methods are functions that are attached to some object.
 
@@ -213,7 +213,7 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 > If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
 
 ### Bonus
-### You Do: Big Ol' Twitter Object (15 / 1:20)
+### You Do: Big Ol' Twitter Object (15 / 11:20)
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 * Follow the link below and answer the questions in bold.
@@ -222,11 +222,11 @@ As this course continues you will encounter plenty of Javascript objects in the 
 
 [Twitter JSON Exercise](https://github.com/ga-dc/big_ole_twitter_object)
 
-## Break (10 / 1:30)
+## Break (10 / 11:30)
 
 # Context
 
-## What is Context? (20 / 1:50)
+## What is Context? (20 / 11:50)
 
 In Javascript, context tells us where functions are invoked.
 
@@ -378,7 +378,7 @@ user.isSignedIn // => false
 -
 ```
 
-## Other `this` Cases (10 / 2:00)
+## Other `this` Cases (10 / 12:00)
 
 ### Events
 
@@ -439,7 +439,7 @@ fruits.forEach(function(currentFruit) {
 
 Note that it is very rare to intentionally use `this` to refer to the window object. Usually this happens when we mistakenly use this incorrectly (a very easy/common mistake for new and even experienced JS developers).
 
-## You Do: Write, Pair, Share (5 / 2:05)
+## You Do: Write, Pair, Share (5 / 12:05)
 
 Consider the following example...
 
@@ -491,7 +491,7 @@ Note that this issue frequently appears anytime we use a callback / anonymous fu
 * using `forEach()` or other iteration functions
 * for event listeners passed into `someElement.addEventListener()`
 
-## Fixing the Global `this` Gotcha (5 / 2:10)
+## Fixing the Global `this` Gotcha (5 / 12:10)
 
 One trick is to store the `this` you want in another variable, commonly named `self` or `that`.
 
@@ -510,7 +510,7 @@ var instructor = {
 instructor.displayFoods();
 ```
 
-## You Do: Test Your Context Knowledge (15 / 2:25)
+## You Do: Test Your Context Knowledge (15 / 12:25)
 
 > 10 minutes exercise. 5 minutes review.
 
@@ -684,7 +684,7 @@ An example of what this might look like:
 
 [Javascript Calculator](https://github.com/ga-dc/js-calculator)
 
-## Closing, Q&A, Review LO's (10 / 2:35)
+## Closing, Q&A, Review LO's (5 / 12:30)
 
 1. How are objects like dictionaries?
 2. What's difference between a property and a method?
