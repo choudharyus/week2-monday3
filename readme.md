@@ -3,19 +3,15 @@
 ## Learning Objectives
 
 ### Objects
-- Explain how objects are defined as data structures
-- Create objects using object literal syntax.
-- Practice interacting with properties of literal objects.
-- Explain nested data structures.
-- Explain the difference between object properties and methods.
-- Write an object method.
+- Demonstrate how to create an object using object literal syntax
+- Explain nested data structures
+- Explain the difference between object properties and methods
+- Write an object method
 
 ### Context
 - Explain Javascript 'context' and what the value of the 'this' keyword refers to
 - Explain what the default context of Javascript executing in the browser is
-- Use the 'this' keyword to set and retrieve a property in a Javascript function
-- Use bind to create a new method bound to an object context
-- Use apply/call to execute a method in a different context
+- Use the 'this' keyword to set and retrieve a property on an object
 
 ## Framing (5 / 10:05)
 
