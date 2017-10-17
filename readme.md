@@ -17,13 +17,13 @@
 - Use bind to create a new method bound to an object context
 - Use apply/call to execute a method in a different context
 
-## Framing (5 / 05)
+## Framing (5 / 10:05)
 
 This lesson will cover two concepts that are crucial for encapsulation and abstraction in Javascript: Objects and Context. Objects allow us to box up multiple functions and data under a single variable. Context determines which object "owns" a function while it's being invoked.
 
 To explore these concepts we will be discussing why we might need/want to use objects in our code. We'll learn how to create, access and alter objects. Then looking at Context, we'll see how all function invocations always bring along a hidden object via the keyword `this`. and how we can attach our own or other objects to the `this` keyword.
 
-## Intro to Objects (5 / 10)
+## Intro to Objects (5 / 10:10)
 
 Before we start to talk about objects, let's visit a site some of you may be familiar with,
 [Amazon](https://www.amazon.com). If we type in some random thing to search for you'll notice all the results have similar properties. Things like, price, title, reviews, Prime eligibility and picture.
@@ -46,7 +46,7 @@ Objects are a complex data type - usually referred to as an *unordered* list (or
 
 > In the above example, the variable `car` points to an object literal. This particular object has 3 properties: `make`, `model` and `year`.
 
-### Turn and Jot: Model WDI Student (5 / 15)
+### Turn and Jot: Model WDI Student (5 / 10:15)
 
 You're goal is to pseudo-code an object literal:
 
@@ -54,7 +54,7 @@ You're goal is to pseudo-code an object literal:
 * Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
 * **Bonus - One key value pair contains an array**
 
-### You DO: Interacting with Objects (30 / 45)
+### Interacting with Objects (20 / 10:35)
 
 **Read through the below, and then complete the exercise with your partner**
 
@@ -131,7 +131,7 @@ Javascript objects also have native methods that take care of this for us...
 Object.keys( car );
 ```
 
-### Exercise
+### Exercise (10 / 10:45)
 
 Create a variable named `wdiStudent` and assign it to an object literal.
 
@@ -147,7 +147,7 @@ Create a variable named `wdiStudent` and assign it to an object literal.
 
 > [Solution](https://gist.github.com/nolds9/efdb0a320e7143f42e96)
 
-### Nested Collections (5 / 50)
+### Nested Collections (5 / 10:50)
 
 Object properties aren't limited to simple data types. We can also nest collections inside of collections.
 
