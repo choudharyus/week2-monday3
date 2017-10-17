@@ -663,44 +663,12 @@ sayHello.call(cat, 'peachpuff');
 
 [More information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
-### More About Binding
-
-Note that #1 is included here for correctness, we haven't covered object constructors yet, but will soon.
-
-> 1. Is the function called with `new` (**new binding**)? If so, `this` is the newly constructed object.
->     `var supremePizza = new Pizza()`
->  
-> 2. Is the function called with `call` or `apply` (**explicit binding**), even hidden inside a `bind` *hard binding*? If so, `this` is the explicitly specified object.
->     `var bakedPizza = bake.call( rawPizza )`
->  
-> 3. Is the function called with a context (**implicit binding**), otherwise known as an owning or containing object? If so, `this` is *that* context object.
->     `var bakedPizza = rawPizza.bake()`
->  
-> 4. Otherwise, default the `this` (**default binding**). If in `strict mode`, pick `undefined`, otherwise pick the `global` object.
->     `var probablyWontWork = bake()`
->
-> Source: [You-Dont-Know-JS/ch2.md](https://github.com/getify/You-Dont-Know-JS/blob/58dbf4f867be0d9c51dfc341765e4e4211608aa1/this%20&%20object%20prototypes/ch2.md)
-
---------
-
-## Peek Ahead: OOP Javascript
-
-Often we have multiple pieces of data in our program that share the same structure. Think flash cards, trivia cards, bank accounts, etc.
-
-In the future, we'll make these objects using "constructors" (think templates for each type), but then we need a way to talk about the structure in general. Context is a very necessary tool to accomplish this.
-
-An example of what this might look like:
-
-[ATM.js](https://github.com/ga-wdi-exercises/atm/blob/solution/solution/js/src/atm.js)
-[Tunr Song Model](https://github.com/ga-wdi-exercises/tunr_node_oojs/blob/oojs_cud/public/js/models/artist.js)
-
 ## Further Reading / Resources
 
 * [Javascript Scoping and Hoisting](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)
 * [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html)
 * [JS for Cats](http://jsforcats.com/)
 * [CoderByte Challenges](https://coderbyte.com/challenges/)
-
 * [Understanding Scope and Context in JavaScript](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
 * [Understand JavaScript’s “this”](http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/)
 * [Everything you wanted to know about JavaScript scope](http://toddmotto.com/everything-you-wanted-to-know-about-javascript-scope/)
