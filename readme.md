@@ -579,6 +579,20 @@ When the code above is executed...
 
 </details>
 
+## Review Questions (5 / 12:30)
+
+1. How are objects like dictionaries?
+2. What's difference between a property and a method?
+3. What is the keyword which references a function/method context?
+4. What is the default context for a function in the browser?
+5. From inside an object's method, how do we retrieve a property from the containing object?
+
+## HW: Calculator
+
+[Javascript Calculator](https://github.com/ga-dc/js-calculator)
+
+-------
+
 ## Next Steps
 
 Read through the bonus section of this lesson plan, paying attention to the `bind`, `call` and `apply` methods. These are ways for you to exercise more control over and gain the ability to re-assign context.
@@ -649,9 +663,7 @@ sayHello.call(cat, 'peachpuff');
 
 [More information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
 
---------
-
-## Summary
+### More About Binding
 
 Note that #1 is included here for correctness, we haven't covered object constructors yet, but will soon.
 
@@ -669,6 +681,8 @@ Note that #1 is included here for correctness, we haven't covered object constru
 >
 > Source: [You-Dont-Know-JS/ch2.md](https://github.com/getify/You-Dont-Know-JS/blob/58dbf4f867be0d9c51dfc341765e4e4211608aa1/this%20&%20object%20prototypes/ch2.md)
 
+--------
+
 ## Peek Ahead: OOP Javascript
 
 Often we have multiple pieces of data in our program that share the same structure. Think flash cards, trivia cards, bank accounts, etc.
@@ -680,25 +694,10 @@ An example of what this might look like:
 [ATM.js](https://github.com/ga-wdi-exercises/atm/blob/solution/solution/js/src/atm.js)
 [Tunr Song Model](https://github.com/ga-wdi-exercises/tunr_node_oojs/blob/oojs_cud/public/js/models/artist.js)
 
-## HW: Calculator
-
-[Javascript Calculator](https://github.com/ga-dc/js-calculator)
-
-## Closing, Q&A, Review LO's (5 / 12:30)
-
-1. How are objects like dictionaries?
-2. What's difference between a property and a method?
-3. What is the keyword which references a function/method context?
-4. What is the default context for a function in the browser?
-5. From inside an object's method, how do we retrieve a property from the containing object?
-
--------
-
 ## Further Reading / Resources
 
 * [Javascript Scoping and Hoisting](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)
 * [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html)
-* [Secrets of the Javascript Ninja](http://webandbeer.com.ar/wp-content/uploads/2014/11/SecretsOfTheJavaScriptNinja.pdf)
 * [JS for Cats](http://jsforcats.com/)
 * [CoderByte Challenges](https://coderbyte.com/challenges/)
 
