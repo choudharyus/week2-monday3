@@ -216,14 +216,15 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 
 ### You Do: Pimp My Ride (5 / 11:05)
 
-You have 5 minutes to create your dream car.  Use the car template above as a guide and add on some extreme properties! Fishtanks? Big-screen? Jet engine? Your car is limited only by your imagination!
+You have 5 minutes to create your dream car.  Use the car template above as a guide but add on some extreme properties! Fishtanks? Big-screen? Jet engine? Your car is limited only by your imagination!
+
+Try to create at least one method!
 
 ### You Do: Big Ol' Twitter Object (15 / 11:20)
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 * Follow the link below and answer the questions in bold.
 * Along with each answer, write down how we would access the property in question.
-* Let's do the first one together...
 
 [Twitter JSON Exercise](https://github.com/ga-dc/big_ole_twitter_object)
 
@@ -291,7 +292,7 @@ console.log(this)
 ```js
 var instructor = {
   fullName: "Nayana Davis",
-  favoriteFood: "Fried Chicken",
+  favoriteFood: "Rice pudding",
   sayHello: function(){
     console.log(`Hi my name is ${this.fullName} and my favorite food is ${this.favoriteFood}.`)
   }
@@ -514,6 +515,9 @@ var instructor = {
 
 instructor.displayFoods();
 ```
+
+* You can also use `.bind(this)` attached to the end of your callback function
+* Use an **Arrow function** as your call back function.  *This preserves the context of this*!
 
 ## You Do: Test Your Context Knowledge (15 / 12:25)
 
