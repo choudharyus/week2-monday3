@@ -17,7 +17,7 @@
 
 This lesson will cover two concepts that are crucial for encapsulation and abstraction in Javascript: Objects and Context. Objects allow us to box up multiple functions and data under a single variable. Context determines which object "owns" a function while it's being invoked.
 
-Today we will explore why we might need/want to use objects in our code, and learn how to create, access, and alter objects. With Context, we'll see how all function invocations always bring along a hidden object via the keyword `this`.  We'll learn how to use `this` on our own objects and how to alter the context of `this`.  
+Today we will explore why we might need/want to use objects in our code, and learn how to create, access, and alter objects. With context, we'll see how all function invocations are always attached to an object which we can access via the keyword `this`.  We'll learn how to use `this` on our own objects and how to alter the context of `this`.  
 
 ## Intro to Objects (5 / 10:10)
 
@@ -214,9 +214,9 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 
 > If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
 
-### You Do: Pimp My Ride (5 / 11:05)
+### You Do: Shrimp My Ride (5 / 11:05)
 
-You have 5 minutes to create your dream car.  Use the car template above as a guide but add on some extreme properties! Fishtanks? Big-screen? Jet engine? Your car is limited only by your imagination!
+Use the car example above to create your own *Boat*. Give your boat whatever properties and methods you would like it to have - *make it fun*! Your boat is limited only by your imagination!
 
 Try to create at least one method!
 
