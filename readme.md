@@ -517,7 +517,7 @@ instructor.displayFoods();
 ```
 
 * You can also use `.bind(this)` attached to the end of your callback function
-* Use an **Arrow function** as your call back function.  *This preserves the context of this*!
+* Use an **Arrow function** as your call back function.  *This preserves the context of* `this`!
 
 ## You Do: Test Your Context Knowledge (15 / 12:25)
 
