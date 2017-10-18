@@ -85,7 +85,7 @@ console.log( car['tire-type'] );
 
 #### Update
 
-To update an object property, we place it on the left side of an assignment statement.
+Call on the object property just like we did when reading it, and use the assignment operator `=`
 
 ```js
 car.year = 2003
