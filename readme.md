@@ -73,14 +73,14 @@ var car = {
 To access object properties, we use either dot `.property` or bracket `['property']` notation.  (`objectName.property`)
 
 ```js
-console.log( car.make );
-console.log( car['make'] );
+console.log( car.make )
+console.log( car['make'] )
 
 // What happens when we try to access a property yet to be defined?
 console.log( car.owner )
 
 // NOTE: When accessing properties whose keys have a "-" in them, you must use bracket notation.
-console.log( car['tire-type'] );
+console.log( car['tire-type'] )
 ```
 
 #### Update
@@ -115,7 +115,7 @@ Like arrays, you can use a loop to iterate through an object. Say we want to pri
 ```js
 // Iterate through object keys
 for (attribute in car) {
-  console.log( attribute );
+  console.log( attribute )
 }
 ```
 > Knowing this, how could we go about getting all the values in an object?
@@ -123,7 +123,9 @@ for (attribute in car) {
 Javascript objects also have native methods that take care of this for us...
 ```js
 // .keys()
-Object.keys( car );
+Object.keys( car )
+// .values()
+Object.values( car )
 ```
 
 ### Exercise (15 / 10:45)
@@ -137,8 +139,6 @@ Create a variable named `wdiStudent` and assign it to an object literal.
 5. Give your student a new property using dot or bracket notation.
 6. Delete one attribute.
 7. Iterate through and print out all of the student's key-value pairs.
-
-**Bonus:** Write a function that returns your `wdiStudent` object
 
 > [Solution](https://gist.github.com/nolds9/efdb0a320e7143f42e96)
 
