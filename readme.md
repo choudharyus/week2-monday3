@@ -41,17 +41,15 @@ Objects are a complex data type - sometimes referred to as an unordered list (or
 
 > In the above example, the variable `car` points to an object literal. This particular object has 3 properties: `make`, `model` and `year`.
 
-### Turn and Jot: Model WDI Student (5 / 10:15)
+### You Do: Model WDI Student (5 / 10:15)
 
-You're goal is to pseudo-code an object literal:
+You're goal is to *pseudo-code* an object literal:
 
 * In pairs, spend 2 minutes thinking about what attributes a WDI student should have (think of at least 5!).
 * Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
 * **Bonus - One key value pair contains an array**
 
 ### Interacting with Objects (20 / 10:35)
-
-**Read through the below, and then complete the exercise with your partner**
 
 #### Create
 
@@ -67,6 +65,8 @@ var car = {
   'tire-type': 'Goodyear'
 }
 ```
+
+> NOTE: Another way of creating objects is to use the Object Constructor method (```var myObj = new Object()```)
 
 #### Read
 
