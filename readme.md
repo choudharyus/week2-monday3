@@ -66,11 +66,11 @@ var car = {
 }
 ```
 
-> NOTE: Another way of creating objects is to use the Object Constructor method (```var myObj = new Object()```)
+> NOTE: Another way of creating objects is to use the Object Constructor method (`var myObj = new Object()`)
 
 #### Read
 
-To access object properties, we use either dot (`.property`) or bracket (`['property']`) notation.
+To access object properties, we use either dot `.property` or bracket `['property']` notation.  (`objectName.property`)
 
 ```js
 console.log( car.make );
@@ -85,7 +85,7 @@ console.log( car['tire-type'] );
 
 #### Update
 
-Call on the object property just like we did when reading it, and use the assignment operator `=` followed by its new value
+Call on the object property just like we did when reading it, and use the assignment operator `=` followed by its new value.  (`objectName.property = newValue`)
 
 ```js
 car.year = 2003
