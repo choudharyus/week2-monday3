@@ -21,12 +21,11 @@ Today we will explore why we might need/want to use objects in our code, and lea
 
 ## Intro to Objects (5 / 10:10)
 
-Before we start to talk about objects, let's visit a site some of you may be familiar with,
-[Amazon](https://www.amazon.com). If we type in some random thing to search for you'll notice all the results have similar properties. Things like, price, title, reviews, Prime eligibility and picture.
+Let's visit a site most of you will probably be familiar with, [Amazon](https://www.amazon.com). If we type something to search for, you may notice all the results have similar properties. Things like, *price*, *title*, *reviews*, *Prime eligibility* and a *picture*.
 
-Turns out, in programming, we need a way to encapsulate logic about things in the real world and represent them in our programs. In Javascript, these things are objects.
+In programming, we need a way to encapsulate logic and data about things in the real world and represent them in our programs. In Javascript, these things are objects.
 
-In JavaScript, objects are collections of properties(key-value pairs). We can add or remove these properties as we please. The simplest way to create an object is by using a curly brace notation (also known as object literal notation).
+In JavaScript, **objects are collections of properties(key-value pairs)**. We can add, remove, or change these properties as we please. The simplest way to create an object is by using a curly brace notation (also known as **object literal notation**).
 
 ```js
 var car = {
@@ -36,7 +35,7 @@ var car = {
 }
 ```
 
-Objects are a complex data type - usually referred to as an *unordered* list (or dictionary/hash/map).
+Objects are a complex data type - sometimes referred to as an unordered list (or dictionary/hash/map).
 * They are a collection of key-value pairs called properties.
 * The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
 
