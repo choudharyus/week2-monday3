@@ -171,7 +171,7 @@ var car = {
 
 [//]: # ( Removed 10 minute break )
 
-## Methods (15 / 11:05)
+## Methods (10 / 11:00)
 
 Methods are functions that are attached to some object.
 
@@ -184,6 +184,13 @@ var car = {
   drive: function(){
     console.log("vroom vroom");
   },
+  gears: ["Reverse", "Neutral", "1", "2", "3", "4"],
+  engine: {
+    horsepower: "6 horses",
+    pistons: 12,
+    fast: true,
+    furious: false
+  }
 
   // Methods can take arguments
   gps: function( location ){
@@ -201,13 +208,16 @@ car.paint( "blue" );
 console.log( `Car color is: ${car.color}` );
 ```
 
-With methods as part of our Javascript toolbox, we now have a cool interface with which we can interact with our objects.
+Checkout our awesome souped-up car!  With methods as part of our Javascript toolbox, we now have an interface with which we can interact with our objects.
 
 We've only scratched the surface for objects. We're going to dive much deeper into them later on in the course.
 
 > If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
 
-### Bonus
+### You Do: Pimp My Ride (5 / 11:05)
+
+You have 5 minutes to create your dream car.  Use the car template above as a guide and add on some extreme properties! Fishtanks? Big-screen? Jet engine? Your car is limited only by your imagination!
+
 ### You Do: Big Ol' Twitter Object (15 / 11:20)
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
