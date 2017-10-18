@@ -17,7 +17,7 @@
 
 This lesson will cover two concepts that are crucial for encapsulation and abstraction in Javascript: Objects and Context. Objects allow us to box up multiple functions and data under a single variable. Context determines which object "owns" a function while it's being invoked.
 
-To explore these concepts we will be discussing why we might need/want to use objects in our code. We'll learn how to create, access and alter objects. Then looking at Context, we'll see how all function invocations always bring along a hidden object via the keyword `this`. and how we can attach our own or other objects to the `this` keyword.
+Today we will explore why we might need/want to use objects in our code, and learn how to create, access, and alter objects. With Context, we'll see how all function invocations always bring along a hidden object via the keyword `this`.  We'll learn how to use `this` on our own objects and how to alter the context of `this`.  
 
 ## Intro to Objects (5 / 10:10)
 
