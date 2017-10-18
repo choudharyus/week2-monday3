@@ -49,7 +49,7 @@ You're goal is to *pseudo-code* an object literal:
 * Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
 * **Bonus - One key value pair contains an array**
 
-### Interacting with Objects (20 / 10:35)
+### Interacting with Objects (15 / 10:30)
 
 #### Create
 
@@ -85,7 +85,7 @@ console.log( car['tire-type'] );
 
 #### Update
 
-Call on the object property just like we did when reading it, and use the assignment operator `=`
+Call on the object property just like we did when reading it, and use the assignment operator `=` followed by its new value
 
 ```js
 car.year = 2003
@@ -126,7 +126,7 @@ Javascript objects also have native methods that take care of this for us...
 Object.keys( car );
 ```
 
-### Exercise (10 / 10:45)
+### Exercise (15 / 10:45)
 
 Create a variable named `wdiStudent` and assign it to an object literal.
 
