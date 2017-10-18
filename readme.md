@@ -182,7 +182,7 @@ var car = {
   model: "Civic",
   color: "red",
   drive: function(){
-    console.log("vroom vroom");
+    console.log("vroom vroom")
   },
   gears: ["Reverse", "Neutral", "1", "2", "3", "4"],
   engine: {
@@ -194,18 +194,18 @@ var car = {
 
   // Methods can take arguments
   gps: function( location ){
-    console.log( `Beep boop, driving to ${location}` );
+    console.log( `Beep boop, driving to ${location}` )
   },
   paint: function( newColor ){
-    console.log( `Your car has been painted ${newColor}` );
-    car.color = newColor;
+    console.log( `Your car has been painted ${newColor}` )
+    car.color = newColor
   }
 }
 
 // We can run the car's two methods like so...
-car.drive();
-car.paint( "blue" );
-console.log( `Car color is: ${car.color}` );
+car.drive()
+car.paint( "blue" )
+console.log( `Car color is: ${car.color}` )
 ```
 
 Checkout our awesome souped-up car!  With methods as part of our Javascript toolbox, we now have an interface with which we can interact with our objects.
@@ -262,10 +262,10 @@ Here's an example of the most common way context is determined for a function. W
 var user = {
   firstName: "John",
   sayName: function(){
-      alert(`My name is ${this.firstName}.`);
+      alert(`My name is ${this.firstName}.`)
   }
 }
-user.sayName();
+user.sayName()
 ```
 
 <details>
@@ -298,7 +298,7 @@ var instructor = {
   }
 }
 
-instructor.sayHello(); // for this function invocation, `this` is `instructor`
+instructor.sayHello() // for this function invocation, `this` is `instructor`
 ```
 
 ### 'Setting' Properties using `this`
@@ -394,8 +394,8 @@ user.isSignedIn // => false
 
 ```js
 $("button").on("click", function(){
-  alert($(this).html());
-});
+  alert($(this).html())
+})
 ```
 
 <details>
@@ -411,20 +411,20 @@ When a function is called, but it's not a method on an object, and no context is
 
 ```js
 function revealThis() {
-  console.log(this);
+  console.log(this)
 }
 
-revealThis();
+revealThis()
 ```
 
 ### Non-Event Callbacks
 
 ```js
-var fruits = ["apple", "banana", "cantaloupe"];
+var fruits = ["apple", "banana", "cantaloupe"]
 
 fruits.forEach(function(){
   // this === the `Window` object
-});
+})
 ```
 
 #### Aside: `forEach`
@@ -432,15 +432,15 @@ fruits.forEach(function(){
 `forEach` is a Javascript method used to iterate through a collection and do something with each item in it.
 
 ```js
-var fruits = ["apples", "bananas", "cherries"];
+var fruits = ["apples", "bananas", "cherries"]
 
 for(var i = 0; i < fruits.length; i++) {
-  console.log(`Every day I eat two ${fruits[i]}`);
+  console.log(`Every day I eat two ${fruits[i]}`)
 }
 
 fruits.forEach(function(currentFruit) {
   console.log(`Every day I eat two ${currentFruit}`)
-});
+})
 ```
 
 Note that it is very rare to intentionally use `this` to refer to the window object. Usually this happens when we mistakenly use this incorrectly (a very easy/common mistake for new and even experienced JS developers).
@@ -457,13 +457,13 @@ var instructor = {
   displayFoods: function() {
     console.log(`Things ${this.fullName} likes:`)
     this.favoriteFoods.forEach(function(food) {
-      console.log(food);
+      console.log(food)
     })
   }
 
 }
 
-instructor.displayFoods();
+instructor.displayFoods()
 ```
 
 Using what we know about forEach, what do we expect the output to be?
@@ -477,13 +477,13 @@ var instructor = {
 
   displayFoods: function() {
     this.favoriteFoods.forEach(function(food) {
-      console.log(`${this.fullName} likes ${food}`);
+      console.log(`${this.fullName} likes ${food}`)
     })
   }
 
 }
 
-instructor.displayFoods();
+instructor.displayFoods()
 ```
 
 ### Answer
@@ -506,14 +506,14 @@ var instructor = {
   fullName: "Angel Valant",
   favoriteFoods: ["Ramen", "Cap'n Crunch", "Tacos"],
   displayFoods: function() {
-    var self = this;
+    var self = this
     this.favoriteFoods.forEach(function(food) {
-      console.log(`${self.fullName} likes ${food}`);
+      console.log(`${self.fullName} likes ${food}`)
     })
   }
 }
 
-instructor.displayFoods();
+instructor.displayFoods()
 ```
 
 * You can also use `.bind(this)` attached to the end of your callback function
@@ -529,21 +529,21 @@ var user = {
     firstName: "john",
     capitalized: function(){
         /*B*/
-        return this.firstName.substring(0,1).toUpperCase() + this.firstName.substring(1);
+        return this.firstName.substring(0,1).toUpperCase() + this.firstName.substring(1)
     },
     sayName: function(){
         /*C*/
-        alert("My name is " + this.capitalized() + ".");
+        alert("My name is " + this.capitalized() + ".")
     }
 }
 
-console.log("Welcome, " + user.capitalized() + "!");
-$("button").on("click", user.sayName);
+console.log("Welcome, " + user.capitalized() + "!")
+$("button").on("click", user.sayName)
 $("input").on("keydown", function(){
     /*D*/
-    console.log("Keypress detected for " + this.firstName);
-});
-user.sayName();
+    console.log("Keypress detected for " + this.firstName)
+})
+user.sayName()
 /*E*/
 ```
 
@@ -622,12 +622,12 @@ var instructor = {
   favoriteFoods: ['Ramen', 'Cap\'n Crunch', 'Tacos'],
   displayFoods: function() {
     this.favoriteFoods.forEach(function(food) {
-      console.log(`${this.name} likes ${food}`);
+      console.log(`${this.name} likes ${food}`)
     }.bind(this))
   }
 }
 
-instructor.displayFoods();
+instructor.displayFoods()
 ```
 
 [More information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
@@ -640,26 +640,26 @@ instructor.displayFoods();
 
 ```js
 function sayHello() {
-  console.log(`Hi! My name is ${this.name}`);
+  console.log(`Hi! My name is ${this.name}`)
 }
 
-var person = {name: 'Manatee the Railyard Toreador'};
-var cat = {name: 'Hobbles McGillicudy'};
-sayHello.call(person);
-sayHello.call(cat);
+var person = {name: 'Manatee the Railyard Toreador'}
+var cat = {name: 'Hobbles McGillicudy'}
+sayHello.call(person)
+sayHello.call(cat)
 ```
 
 `call` also lets us pass in the arguments to the function:
 
 ```js
 function sayHello(favColor) {
-  console.log(`Hi! My name is ${this.name} and I like ${favColor}`);
+  console.log(`Hi! My name is ${this.name} and I like ${favColor}`)
 }
 
-var person = {name: 'Manatee the Railyard Toreador'};
-var cat = {name: 'Hobbles McGillicudy'};
-sayHello.call(person, 'blue');
-sayHello.call(cat, 'peachpuff');
+var person = {name: 'Manatee the Railyard Toreador'}
+var cat = {name: 'Hobbles McGillicudy'}
+sayHello.call(person, 'blue')
+sayHello.call(cat, 'peachpuff')
 ```
 
 [More information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
