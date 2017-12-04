@@ -3,12 +3,14 @@
 ## Learning Objectives
 
 ### Objects
+
 - Demonstrate how to create an object using object literal syntax
 - Explain nested data structures
 - Explain the difference between object properties and methods
 - Write an object method
 
 ### Context
+
 - Explain Javascript 'context' and what the value of the 'this' keyword refers to
 - Explain what the default context of Javascript executing in the browser is
 - Use the 'this' keyword to set and retrieve a property on an object
@@ -31,7 +33,7 @@ In JavaScript, **objects are collections of properties(key-value pairs)**. We ca
 var car = {
   make: 'Honda',
   model: 'Civic',
-  year: 1997
+  year: 1997      // Don't add a comma after the last pair!
 }
 ```
 
@@ -43,7 +45,7 @@ Objects are a complex data type - sometimes referred to as an unordered list (or
 
 ### You Do: Model WDI Student (5 / 10:15)
 
-You're goal is to *pseudo-code* an object literal:
+Your goal is to *pseudo-code* an object literal:
 
 * In pairs, spend 2 minutes thinking about what attributes a WDI student should have (think of at least 5!).
 * Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
@@ -60,9 +62,9 @@ var car = {
   make: 'Honda',
   model: 'Civic',
   year: 1997,
-
-  // NOTE: Keys with a "-" in their name must be surrounded by quotation marks.
   'tire-type': 'Goodyear'
+  // NOTE: Keys with a "-" in their name must be surrounded by quotation marks.
+  // NOTE: You should use camelCase in JS, but sometimes you need to work with hyphens in JSON objects, if they were generated from a non-JavaScript API.
 }
 ```
 
@@ -169,7 +171,6 @@ var car = {
 * "Neutral" (i.e., array value within an object)?
 * "6 horses" (i.e., object value within an object)?
 
-[//]: # ( Removed 10 minute break )
 
 ## Methods (10 / 11:00)
 
@@ -223,10 +224,12 @@ Try to create at least one method!
 ### You Do: Big Ol' Twitter Object (15 / 11:20)
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
-* Follow the link below and answer the questions in bold.
-* Along with each answer, write down how we would access the property in question.
 
-[Twitter JSON Exercise](https://github.com/ga-dc/big_ole_twitter_object)
+* Go to the [Big Ol' Twitter Object](https://ga-wdi-exercises.github.io/big_ole_twitter_object/) page!
+* In the console, you can examine the tweet object by typing `tweet;`. This object represent this [tweet](https://twitter.com/twitterapi/status/210462857140252672) from the [Twitter API](https://twitter.com/TwitterAPI) account.
+* Answer the questions in the page! Test your answers in the console!
+
+<!-- [Twitter JSON Exercise Repo](https://github.com/ga-dc/big_ole_twitter_object) -->
 
 ## Break (10 / 11:30)
 
@@ -260,9 +263,9 @@ Here's an example of the most common way context is determined for a function. W
 
 ```js
 var user = {
-  firstName: "John",
+  fullName: "Andy Whitley",
   sayName: function(){
-      alert(`My name is ${this.firstName}.`)
+    window.alert(`My name is ${this.fullName}.`)
   }
 }
 user.sayName()
@@ -290,15 +293,18 @@ console.log(this)
 ### 'Getting' Properties using `this`
 
 ```js
-var instructor = {
-  fullName: "Nayana Davis",
+var user = {
+  fullName: "Andy Whitley",
   favoriteFood: "Rice pudding",
+  sayName: function(){
+    window.alert(`My name is ${this.fullName}.`)
+  },
   sayHello: function(){
     console.log(`Hi my name is ${this.fullName} and my favorite food is ${this.favoriteFood}.`)
   }
 }
 
-instructor.sayHello() // for this function invocation, `this` is `instructor`
+user.sayHello() // for this function invocation, `this` is `user`
 ```
 
 ### 'Setting' Properties using `this`
@@ -370,7 +376,7 @@ var user = {
     this.isSignedIn = false
   },
   greetUser: function() {
-    console.log(`Welcome back ${this.userName}`)
+    console.log(`Welcome back ${this.userName}!`)
   }
 }
 
@@ -393,8 +399,8 @@ user.isSignedIn // => false
 ```
 
 ```js
-$("button").on("click", function(){
-  alert($(this).html())
+document.getElementsByTagName('button')[0].addEventListener('click', function(){
+  window.alert(this.innerHTML)
 })
 ```
 
@@ -423,6 +429,7 @@ revealThis()
 var fruits = ["apple", "banana", "cantaloupe"]
 
 fruits.forEach(function(){
+  console.log(this)  
   // this === the `Window` object
 })
 ```
@@ -450,8 +457,8 @@ Note that it is very rare to intentionally use `this` to refer to the window obj
 Consider the following example...
 
 ```js
-var instructor = {
-  fullName: "Angel Valant",
+var user = {
+  fullName: "Andy Whitley",
   favoriteFoods: ["Ramen", "Capn Crunch", "Tacos"],
 
   displayFoods: function() {
@@ -463,7 +470,7 @@ var instructor = {
 
 }
 
-instructor.displayFoods()
+user.displayFoods()
 ```
 
 Using what we know about forEach, what do we expect the output to be?
@@ -471,8 +478,8 @@ Using what we know about forEach, what do we expect the output to be?
 Now what about this *slightly* modified example...
 
 ```js
-var instructor = {
-  fullName: "Angel Valant",
+var user = {
+  fullName: "Andy Whitley",
   favoriteFoods: ["Ramen", "Capn Crunch", "Tacos"],
 
   displayFoods: function() {
@@ -483,16 +490,17 @@ var instructor = {
 
 }
 
-instructor.displayFoods()
+user.displayFoods()
 ```
 
 ### Answer
 
-In the first case, `this` behaves like we would expect. It references `instructor` since it's inside a function attached to an `instructor`.
+In the first case, `this` behaves like we would expect. It references `user` since it's inside a function attached to an `user`.
 
 In the second case, `this` is inside an anonymous function, so it refers to the global object.
 
 Note that this issue frequently appears anytime we use a callback / anonymous function, such as...
+
 * using `setTimeout()` or `setInterval()` to schedule callbacks
 * using `forEach()` or other iteration functions
 * for event listeners passed into `someElement.addEventListener()`
@@ -502,8 +510,8 @@ Note that this issue frequently appears anytime we use a callback / anonymous fu
 One trick is to store the `this` you want in another variable, commonly named `self` or `that`.
 
 ```js
-var instructor = {
-  fullName: "Angel Valant",
+var user = {
+  fullName: "Andy Whitley",
   favoriteFoods: ["Ramen", "Cap'n Crunch", "Tacos"],
   displayFoods: function() {
     var self = this
@@ -513,7 +521,7 @@ var instructor = {
   }
 }
 
-instructor.displayFoods()
+user.displayFoods()
 ```
 
 * You can also use `.bind(this)` attached to the end of your callback function
@@ -617,8 +625,8 @@ These let you "force" `this` to be something specific.
 ### Bind
 
 ```js
-var instructor = {
-  name: 'Angel Valant',
+var user = {
+  name: 'Andy Whitley',
   favoriteFoods: ['Ramen', 'Cap\'n Crunch', 'Tacos'],
   displayFoods: function() {
     this.favoriteFoods.forEach(function(food) {
@@ -627,7 +635,7 @@ var instructor = {
   }
 }
 
-instructor.displayFoods()
+user.displayFoods()
 ```
 
 [More information](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
