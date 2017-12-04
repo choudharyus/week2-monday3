@@ -534,23 +534,32 @@ user.displayFoods()
 ```js
 /*A*/
 var user = {
-    firstName: "john",
-    capitalized: function(){
-        /*B*/
-        return this.firstName.substring(0,1).toUpperCase() + this.firstName.substring(1)
-    },
-    sayName: function(){
-        /*C*/
-        alert("My name is " + this.capitalized() + ".")
-    }
+  firstName: "john",
+  capitalized: function () {
+    /*B*/
+    return this.firstName.substring(0, 1).toUpperCase() + this.firstName.substring(1)
+  },
+  sayName: function () {
+    /*C*/
+    alert('My name is ' + this.capitalized() + '.')
+  }
 }
 
 console.log("Welcome, " + user.capitalized() + "!")
-$("button").on("click", user.sayName)
-$("input").on("keydown", function(){
+
+var buttons = document.getElementsByTagName('button')
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener('click', user.sayName)
+}
+
+var inputs = document.getElementsByTagName('input')
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener('keydown', function () {
     /*D*/
-    console.log("Keypress detected for " + this.firstName)
-})
+    console.log('Keypress detected for ' + this.firstName)
+  })
+}
+
 user.sayName()
 /*E*/
 ```
@@ -561,12 +570,10 @@ When the code above is executed...
     - `Window`
     - `null`
     - `user`
-    - `$` (jQuery)
 2. What is the value of `this` at B?
     - `Window`
     - `null`
     - `user`
-    - `$` (jQuery)
 3. Why does the click event throw an error?
     - Because there aren't parentheses after `user.sayName`
     - Because `user.sayName` is in an event so `this` is not `user`
