@@ -613,7 +613,7 @@ When the code above is executed...
 
 ## HW: Calculator
 
-[Javascript Calculator](https://github.com/ga-dc/js-calculator)
+[Javascript Calculator](https://git.generalassemb.ly/ga-wdi-exercises/js-calculator)
 
 -------
 
