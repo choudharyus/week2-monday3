@@ -298,7 +298,7 @@ console.log(this)
 
 ```js
 var user = {
-  fullName: "Andy Whitley",
+  fullName: "James Reichard",
   favoriteFood: "Rice pudding",
   sayName: function(){
     window.alert(`My name is ${this.fullName}.`)
@@ -317,7 +317,7 @@ This feature allows not just 'getting' property info on objects, but also settin
 
 ```js
 var user = {
-  userName: "metaljamez",
+  userName: "numbr1rawkr",
   isSignedIn: false,
   signIn: function() {
     this.isSignedIn = true
@@ -340,7 +340,7 @@ Because we've written a method to set the `isSignedIn` property, we can use that
 
 ```js
 var user = {
-  userName: "AndyWhitley",
+  userName: "numbr1rawkr",
   password: "password1234",
   isSignedIn: false,
   signIn: function(pwd) {
@@ -367,7 +367,7 @@ We can also use `this` to reference and call other methods on the object.
 
 ```js
 var user = {
-  userName: "AndyWhitley",
+  userName: "numbr1rawkr",
   password: "password1234",
   isSignedIn: false,
   signIn: function(pwd) {
@@ -387,7 +387,7 @@ var user = {
 user.signIn("tacobell")
 user.isSignedIn // => false
 user.signIn("password1234")
-// => Welcome back AndyWhitley
+// => Welcome back numbr1rawkr
 user.isSignedIn // => true
 user.signOut()
 user.isSignedIn // => false
@@ -462,7 +462,7 @@ Consider the following example...
 
 ```js
 var user = {
-  fullName: "Andy Whitley",
+  fullName: "James Reichard",
   favoriteFoods: ["Ramen", "Capn Crunch", "Tacos"],
 
   displayFoods: function() {
@@ -483,7 +483,7 @@ Now what about this *slightly* modified example...
 
 ```js
 var user = {
-  fullName: "Andy Whitley",
+  fullName: "James Reichard",
   favoriteFoods: ["Ramen", "Capn Crunch", "Tacos"],
 
   displayFoods: function() {
@@ -515,7 +515,7 @@ One trick is to store the `this` you want in another variable, commonly named `s
 
 ```js
 var user = {
-  fullName: "Andy Whitley",
+  fullName: "James Reichard",
   favoriteFoods: ["Ramen", "Cap'n Crunch", "Tacos"],
   displayFoods: function() {
     var self = this
@@ -637,7 +637,7 @@ These let you "force" `this` to be something specific.
 
 ```js
 var user = {
-  name: 'Andy Whitley',
+  name: 'James Reichard',
   favoriteFoods: ['Ramen', 'Cap\'n Crunch', 'Tacos'],
   displayFoods: function() {
     this.favoriteFoods.forEach(function(food) {
