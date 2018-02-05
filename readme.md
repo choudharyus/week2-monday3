@@ -15,13 +15,13 @@
 - Explain what the default context of Javascript executing in the browser is
 - Use the 'this' keyword to set and retrieve a property on an object
 
-## Framing (5 / 10:05)
+## Framing (5 min / 2:35)
 
 This lesson will cover two concepts that are crucial for encapsulation and abstraction in Javascript: Objects and Context. Objects allow us to box up multiple functions and data under a single variable. Context determines which object "owns" a function while it's being invoked.
 
 Today we will explore why we might need/want to use objects in our code, and learn how to create, access, and alter objects. With context, we'll see how all function invocations are always attached to an object which we can access via the keyword `this`.  We'll learn how to use `this` on our own objects and how to alter the context of `this`.  
 
-## Intro to Objects (5 / 10:10)
+## Intro to Objects (5 min / 2:40)
 
 Let's visit a site most of you will probably be familiar with, [Amazon](https://www.amazon.com). If we type something to search for, you may notice all the results have similar properties. Things like, *price*, *title*, *reviews*, *Prime eligibility* and a *picture*.
 
@@ -43,7 +43,7 @@ Objects are a complex data type - sometimes referred to as an unordered list (or
 
 > In the above example, the variable `car` points to an object literal. This particular object has 3 properties: `make`, `model` and `year`.
 
-### You Do: Model WDI Student (5 / 10:15)
+### You Do: Model WDI Student (5 min / 2:45)
 
 Your goal is to *pseudo-code* an object literal:
 
@@ -51,7 +51,7 @@ Your goal is to *pseudo-code* an object literal:
 * Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
 * **Bonus - One key value pair contains an array**
 
-### Interacting with Objects (15 / 10:30)
+### Interacting with Objects (15 min / 3:00)
 
 #### Create
 
@@ -130,7 +130,7 @@ Object.keys( car )
 Object.values( car )
 ```
 
-### Exercise (15 / 10:45)
+### Exercise (15 min / 3:15)
 
 Create a variable named `wdiStudent` and assign it to an object literal.
 
@@ -144,7 +144,7 @@ Create a variable named `wdiStudent` and assign it to an object literal.
 
 > [Solution](https://gist.github.com/nolds9/efdb0a320e7143f42e96)
 
-### Nested Collections (5 / 10:50)
+### Nested Collections (5 min / 3:20)
 
 Object properties aren't limited to simple data types. We can also nest collections inside of collections.
 
@@ -172,7 +172,7 @@ var car = {
 * "6 horses" (i.e., object value within an object)?
 
 
-## Methods (10 / 11:00)
+## Methods (10 min / 3:30)
 
 Methods are functions that are attached to some object.
 
@@ -215,13 +215,17 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 
 > If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
 
-### You Do: Shrimp My Ride (5 / 11:05)
+### You Do: Shrimp My Ride (5 min / 3:35)
 
 Use the car example above to create your own *Boat*. Give your boat whatever properties and methods you would like it to have - *make it fun*! Your boat is limited only by your imagination!
 
 Try to create at least one method!
 
-### You Do: Big Ol' Twitter Object (15 / 11:20)
+#### Bonus!
+
+Yo dog, I heard you like objects, so put an object in your object!
+
+### You Do: Big Ol' Twitter Object (15 min / 3:50)
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 
@@ -231,11 +235,11 @@ As this course continues you will encounter plenty of Javascript objects in the 
 
 <!-- [Twitter JSON Exercise Repo](https://github.com/ga-dc/big_ole_twitter_object) -->
 
-## Break (10 / 11:30)
+## Break (10 min / 4:00)
 
 # Context
 
-## What is Context? (20 / 11:50)
+## What is Context? (20 min / 4:20)
 
 In Javascript, context tells us where functions are invoked.
 
@@ -263,7 +267,7 @@ Here's an example of the most common way context is determined for a function. W
 
 ```js
 var user = {
-  fullName: "Andy Whitley",
+  fullName: "James Reichard",
   sayName: function(){
     window.alert(`My name is ${this.fullName}.`)
   }
@@ -313,7 +317,7 @@ This feature allows not just 'getting' property info on objects, but also settin
 
 ```js
 var user = {
-  userName: "AndyWhitley",
+  userName: "metaljamez",
   isSignedIn: false,
   signIn: function() {
     this.isSignedIn = true
@@ -390,7 +394,7 @@ user.isSignedIn // => false
 -
 ```
 
-## Other `this` Cases (10 / 12:00)
+## Other `this` Cases (10 min / 4:30)
 
 ### Events
 
@@ -452,7 +456,7 @@ fruits.forEach(function(currentFruit) {
 
 Note that it is very rare to intentionally use `this` to refer to the window object. Usually this happens when we mistakenly use this incorrectly (a very easy/common mistake for new and even experienced JS developers).
 
-## You Do: Write, Pair, Share (5 / 12:05)
+## You Do: Write, Pair, Share (5 min / 4:35)
 
 Consider the following example...
 
@@ -505,7 +509,7 @@ Note that this issue frequently appears anytime we use a callback / anonymous fu
 * using `forEach()` or other iteration functions
 * for event listeners passed into `someElement.addEventListener()`
 
-## Fixing the Global `this` Gotcha (5 / 12:10)
+## Fixing the Global `this` Gotcha (5 min / 4:40)
 
 One trick is to store the `this` you want in another variable, commonly named `self` or `that`.
 
@@ -527,7 +531,7 @@ user.displayFoods()
 * You can also use `.bind(this)` attached to the end of your callback function
 * Use an **Arrow function** as your call back function.  *This preserves the context of* `this`!
 
-## You Do: Test Your Context Knowledge (15 / 12:25)
+## You Do: Test Your Context Knowledge (15 min / 4:55)
 
 > 10 minutes exercise. 5 minutes review.
 
@@ -603,7 +607,7 @@ When the code above is executed...
 
 </details>
 
-## Review Questions (5 / 12:30)
+## Review Questions (5 min / 5:00)
 
 1. How are objects like dictionaries?
 2. What's difference between a property and a method?
