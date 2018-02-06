@@ -19,15 +19,15 @@
 
 This lesson will cover two concepts that are crucial for encapsulation and abstraction in Javascript: Objects and Context. Objects allow us to box up multiple functions and data under a single variable. Context determines which object "owns" a function while it's being invoked.
 
-Today we will explore why we might need/want to use objects in our code, and learn how to create, access, and alter objects. With context, we'll see how all function invocations are always attached to an object which we can access via the keyword `this`.  We'll learn how to use `this` on our own objects and how to alter the context of `this`.  
+Today we will explore why we might want to use objects in our code, and learn how to create, access, and alter objects. With context, we'll see how all function invocations are always attached to an object which we can access via the keyword `this`.  We'll learn how to use `this` on our own objects and how to alter the context of `this`.  
 
 ## Intro to Objects (5 min / 2:40)
 
 Let's visit a site most of you will probably be familiar with, [Amazon](https://www.amazon.com). If we type something to search for, you may notice all the results have similar properties. Things like, *price*, *title*, *reviews*, *Prime eligibility* and a *picture*.
 
-In programming, we need a way to encapsulate logic and data about things in the real world and represent them in our programs. In Javascript, these things are objects.
+In programming, we need a way to contain logic and data about things in the real world and represent them in our programs. An effective way to do this is with *objects*.  
 
-In JavaScript, **objects are collections of properties(key-value pairs)**. We can add, remove, or change these properties as we please. The simplest way to create an object is by using a curly brace notation (also known as **object literal notation**).
+In JavaScript, **objects are collections of properties(key-value pairs)**. We can add, remove, or change these properties as we please. The simplest way to create an object is by using **object literal notation**.
 
 ```js
 var car = {
@@ -37,11 +37,19 @@ var car = {
 }
 ```
 
-Objects are a complex data type - sometimes referred to as an unordered list (or dictionary/hash/map).
+Objects are a complex data type - sometimes referred to as an *unordered* list (or dictionary/hash/map).
 * They are a collection of key-value pairs called properties.
 * The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
 
-> In the above example, the variable `car` points to an object literal. This particular object has 3 properties: `make`, `model` and `year`.
+In the above example, the variable `car` points to an object literal. This particular object has 3 properties: `make`, `model` and `year`.
+
+We could store this same information in an array like this...
+
+```js
+var car = ['Honda', 'Civic', 1997]
+```
+
+Why advantages might there be in storing `car` as an object?
 
 ### You Do: Model WDI Student (5 min / 2:45)
 
@@ -68,7 +76,16 @@ var car = {
 }
 ```
 
-> NOTE: Another way of creating objects is to use the Object Constructor method (`var myObj = new Object()`)
+ASIDE: Another way of creating objects is to use the **Object Constructor method** (`var myObj = new Object()`)
+```js
+var car = new Object()
+  car.make = 'Honda',
+  car.model = 'Civic',
+  car.year = 1997,
+  car['tire-type'] = 'Goodyear'
+```
+
+Object literal notation will be preferred moving forward.  
 
 #### Read
 
