@@ -229,7 +229,7 @@ Yo dog, I heard you like objects, so put an object in your object!
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 
-* Go to the [Big Ol' Twitter Object](https://ga-wdi-exercises.github.io/big_ole_twitter_object/) page!
+* Go to the [Big Ol' Twitter Object](https://git.generalassemb.ly/ga-wdi-exercises/big_ole_twitter_object/) page!
 * In the console, you can examine the tweet object by typing `tweet;`. This object represent this [tweet](https://twitter.com/twitterapi/status/210462857140252672) from the [Twitter API](https://twitter.com/TwitterAPI) account.
 * Answer the questions in the page! Test your answers in the console!
 
@@ -284,7 +284,7 @@ user.sayName()
 
 ### A Rule of Thumb
 
-In general, `this` is whatever was to the **left of the period** when it was called, unless...
+In general, `this` is whatever was to the **left of the period** when it was ***called***, unless...
 - You're in an event listener function, in which case `this` is the thing that was clicked on.
 - You're in another callback function, in which case `this` is probably the `Window`.
 
@@ -611,9 +611,9 @@ When the code above is executed...
 
 1. How are objects like dictionaries?
 2. What's difference between a property and a method?
-3. What is the keyword which references a function/method context?
-4. What is the default context for a function in the browser?
-5. From inside an object's method, how do we retrieve a property from the containing object?
+3. How can I view all of an object's properties?
+4. What is the keyword which references the context of a function/method?
+5. What is the default context for a function in the browser?
 
 ## HW: Calculator
 
