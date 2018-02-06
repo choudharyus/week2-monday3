@@ -77,15 +77,15 @@ var car = {
 ```
 
 ASIDE: Another way of creating objects is to use the **Object Constructor method** (`var myObj = new Object()`)
+
 ```js
 var car = new Object()
   car.make = 'Honda',
   car.model = 'Civic',
-  car.year = 1997,
-  car['tire-type'] = 'Goodyear'
+  car.year = 1997
 ```
 
-Object literal notation will be preferred moving forward.  
+We will be using *object literal notation* moving forward.  
 
 #### Read
 
@@ -208,7 +208,7 @@ var car = {
     pistons: 12,
     fast: true,
     furious: false
-  }
+  },
 
   // Methods can take arguments
   gps: function( location ){
@@ -246,8 +246,8 @@ Yo dog, I heard you like objects, so put an object in your object!
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 
-* Go to the [Big Ol' Twitter Object](https://git.generalassemb.ly/ga-wdi-exercises/big_ole_twitter_object/) page!
-* In the console, you can examine the tweet object by typing `tweet;`. This object represent this [tweet](https://twitter.com/twitterapi/status/210462857140252672) from the [Twitter API](https://twitter.com/TwitterAPI) account.
+* Go to the [Big Ol' Twitter Object](http://ga-wdi-exercises.github.io/big_ole_twitter_object/) page!
+* In the console, you can examine the tweet object by typing `tweet`. This object represent this [tweet](https://twitter.com/twitterapi/status/210462857140252672) from the [Twitter API](https://twitter.com/TwitterAPI) account.
 * Answer the questions in the page! Test your answers in the console!
 
 <!-- [Twitter JSON Exercise Repo](https://github.com/ga-dc/big_ole_twitter_object) -->
@@ -262,7 +262,7 @@ In Javascript, context tells us where functions are invoked.
 
 In short, the **context is the object that a function is attached to**. We'll see that context can change under certain circumstances.
 
-Every time a Javascript function is called, a context is determined / set. That context is always an object, and can be referenced in the function definition (code) using a special keyword in JS, `this`.
+Every time a Javascript function is called, a context is determined / set. That context is always an object, and can be referenced in the function definition using a special keyword in JS, `this`.
 
 We use `this` similar to the way we use pronouns in natural languages like English and French. Say we write:
 
@@ -286,7 +286,7 @@ Here's an example of the most common way context is determined for a function. W
 var user = {
   fullName: "James Reichard",
   sayName: function(){
-    window.alert(`My name is ${this.fullName}.`)
+    alert(`My name is ${this.fullName}.`)
   }
 }
 user.sayName()
@@ -295,7 +295,7 @@ user.sayName()
 <details>
   <summary><strong>What does <code>this</code> represent here?</strong></summary>
 
-  > What's to the left of the period when `sayName` is called is `user`. So, `this === user`.
+  > Here the object that the method is being called on is `user`
 
 </details>
 
@@ -318,7 +318,7 @@ var user = {
   fullName: "James Reichard",
   favoriteFood: "Rice pudding",
   sayName: function(){
-    window.alert(`My name is ${this.fullName}.`)
+    alert(`My name is ${this.fullName}.`)
   },
   sayHello: function(){
     console.log(`Hi my name is ${this.fullName} and my favorite food is ${this.favoriteFood}.`)
@@ -421,7 +421,7 @@ user.isSignedIn // => false
 
 ```js
 document.getElementsByTagName('button')[0].addEventListener('click', function(){
-  window.alert(this.innerHTML)
+  alert(this.innerHTML)
 })
 ```
 
