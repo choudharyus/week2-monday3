@@ -246,11 +246,9 @@ Yo dog, I heard you like objects, so put an object in your object!
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 
-* Go to the [Big Ol' Twitter Object](http://ga-wdi-exercises.github.io/big_ole_twitter_object/) page!
+* Go to the [Big Ol' Twitter Object](https://git.generalassemb.ly/pages/dc-wdi-fundamentals/big-ol-twitter-object/) page!
 * In the console, you can examine the tweet object by typing `tweet`. This object represent this [tweet](https://twitter.com/twitterapi/status/210462857140252672) from the [Twitter API](https://twitter.com/TwitterAPI) account.
 * Answer the questions in the page! Test your answers in the console!
-
-<!-- [Twitter JSON Exercise Repo](https://github.com/ga-dc/big_ole_twitter_object) -->
 
 ## Break (10 min / 4:00)
 
@@ -634,15 +632,13 @@ When the code above is executed...
 
 ## HW: Calculator
 
-[Javascript Calculator](https://git.generalassemb.ly/ga-wdi-exercises/js-calculator)
-
--------
+[Javascript Calculator](https://git.generalassemb.ly/dc-wdi-fundamentals/js-calculator)
 
 ## Next Steps
 
 Read through the bonus section of this lesson plan, paying attention to the `bind`, `call` and `apply` methods. These are ways for you to exercise more control over and gain the ability to re-assign context.
 
-Also [take a look at this repo](https://github.com/ga-wdi-exercises/js_context_and_this/), which compares good and bad ways to apply context. We suggest reading up on `bind`, `call` and `apply` before doing so, however, since the examples make use of some of these methods.
+Also [take a look at this repo](https://git.generalassemb.ly/dc-wdi-fundamentals/js-context-and-this-review), which compares good and bad ways to apply context. We suggest reading up on `bind`, `call` and `apply` before doing so, however, since the examples make use of some of these methods.
 
 ## You Do: Bind, Call and Apply (Bonus)
 
