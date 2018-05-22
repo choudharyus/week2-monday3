@@ -15,13 +15,13 @@
 - Explain what the default context of Javascript executing in the browser is
 - Use the 'this' keyword to set and retrieve a property on an object
 
-## Framing (5 min / 2:35)
+## Framing (5 min / 0:05)
 
 This lesson will cover two concepts that are crucial for encapsulation and abstraction in Javascript: Objects and Context. Objects allow us to box up multiple functions and data under a single variable. Context determines which object "owns" a function while it's being invoked.
 
 Today we will explore why we might want to use objects in our code, and learn how to create, access, and alter objects. With context, we'll see how all function invocations are always attached to an object which we can access via the keyword `this`.  We'll learn how to use `this` on our own objects and how to alter the context of `this`.  
 
-## Intro to Objects (5 min / 2:40)
+## Intro to Objects (5 min / 0:10)
 
 Let's visit a site most of you will probably be familiar with, [Amazon](https://www.amazon.com). If we type something to search for, you may notice all the results have similar properties. Things like, *price*, *title*, *reviews*, *Prime eligibility* and a *picture*.
 
@@ -37,7 +37,11 @@ var car = {
 }
 ```
 
-Objects are a complex data type - sometimes referred to as an *unordered* list (or dictionary/hash/map).
+> "make" is the key, while "Honda" is the value
+
+> Objects must have both a key and a value - neither can be empty.
+
+Objects are a complex data type - sometimes referred to as a dictionary/hash/map.
 * They are a collection of key-value pairs called properties.
 * The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
 
@@ -51,7 +55,7 @@ var car = ['Honda', 'Civic', 1997]
 
 Why advantages might there be in storing `car` as an object?
 
-### You Do: Model WDI Student (5 min / 2:45)
+### You Do: Model WDI Student (5 min / 0:15)
 
 Your goal is to *pseudo-code* an object literal:
 
@@ -59,7 +63,7 @@ Your goal is to *pseudo-code* an object literal:
 * Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
 * **Bonus - One key value pair contains an array**
 
-### Interacting with Objects (15 min / 3:00)
+### Interacting with Objects (15 min / 0:30)
 
 #### Create
 
@@ -71,7 +75,7 @@ var car = {
   model: 'Civic',
   year: 1997,
   'tire-type': 'Goodyear'
-  // NOTE: Keys with a "-" in their name must be surrounded by quotation marks.
+  // NOTE: Keys with a "-" or space in their name must be surrounded by quotation marks.
   // NOTE: You should use camelCase in JS, but sometimes you need to work with hyphens in JSON objects, if they were generated from a non-JavaScript API.
 }
 ```
@@ -80,16 +84,18 @@ ASIDE: Another way of creating objects is to use the **Object Constructor method
 
 ```js
 var car = new Object()
-  car.make = 'Honda',
-  car.model = 'Civic',
-  car.year = 1997
+
+// then you can populate the object
+car.make = 'Honda',
+car.model = 'Civic',
+car.year = 1997
 ```
 
 We will be using *object literal notation* moving forward.  
 
 #### Read
 
-To access object properties, we use either dot `.property` or bracket `['property']` notation.  (`objectName.property`)
+To access object properties, we use either dot `.property` or bracket `['property']` notation.
 
 ```js
 console.log( car.make )
@@ -98,16 +104,18 @@ console.log( car['make'] )
 // What happens when we try to access a property yet to be defined?
 console.log( car.owner )
 
-// NOTE: When accessing properties whose keys have a "-" in them, you must use bracket notation.
+// NOTE: When accessing properties whose keys have a "-" or space in them, you must use bracket notation.
 console.log( car['tire-type'] )
 ```
 
 #### Update
 
-Call on the object property just like we did when reading it, and use the assignment operator `=` followed by its new value.  (`objectName.property = newValue`)
+Call on the object property just like we did when reading it, and use the assignment operator `=` followed by its new value.
 
 ```js
 car.year = 2003
+// or
+car['year'] = 2003
 ```
 
 We can also create brand new properties for an object after it's initialized using this method.
@@ -115,6 +123,8 @@ We can also create brand new properties for an object after it's initialized usi
 ```js
 // Now our car has a smell property equal to "Leathery Boot". We did not initially declare this property.
 car.smell = "Leathery Boot"
+
+console.log(car)
 ```
 
 #### Delete
@@ -134,7 +144,7 @@ Like arrays, you can use a loop to iterate through an object. Say we want to pri
 ```js
 // Iterate through object keys
 for (attribute in car) {
-  console.log( attribute )
+  console.log(attribute)
 }
 ```
 > Knowing this, how could we go about getting all the values in an object?
@@ -142,16 +152,16 @@ for (attribute in car) {
 Javascript objects also have native methods that take care of this for us...
 ```js
 // .keys()
-Object.keys( car )
+Object.keys(car)
 // .values()
-Object.values( car )
+Object.values(car)
 ```
 
-### Exercise (15 min / 3:15)
+### Exercise (10 min / 0:40)
 
 Create a variable named `wdiStudent` and assign it to an object literal.
 
-1. Give your student at least three properties.
+1. Give your student at least three properties in the initial declaration.
 2. One must have a key that contains a hyphen.
 3. One must contain an array or object.
 4. Update two properties, one of which is the hyphenated.
@@ -161,7 +171,7 @@ Create a variable named `wdiStudent` and assign it to an object literal.
 
 > [Solution](https://gist.github.com/nolds9/efdb0a320e7143f42e96)
 
-### Nested Collections (5 min / 3:20)
+### Nested Collections (5 min / 0:45)
 
 Object properties aren't limited to simple data types. We can also nest collections inside of collections.
 
@@ -189,7 +199,7 @@ var car = {
 * "6 horses" (i.e., object value within an object)?
 
 
-## Methods (10 min / 3:30)
+## Methods (10 min / 0:55)
 
 Methods are functions that are attached to some object.
 
@@ -209,21 +219,15 @@ var car = {
     fast: true,
     furious: false
   },
-
   // Methods can take arguments
   gps: function( location ){
     console.log( `Beep boop, driving to ${location}` )
   },
-  paint: function( newColor ){
-    console.log( `Your car has been painted ${newColor}` )
-    car.color = newColor
-  }
 }
 
 // We can run the car's two methods like so...
 car.drive()
-car.paint( "blue" )
-console.log( `Car color is: ${car.color}` )
+car.gps("neverland")
 ```
 
 Checkout our awesome souped-up car!  With methods as part of our Javascript toolbox, we now have an interface with which we can interact with our objects.
@@ -232,17 +236,9 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 
 > If you're looking for a sneak peak into the power of objects and functions, we recommend reading [The Secret Life of JS Objects](http://eloquentjavascript.net/06_object.html) chapter in Eloquent JS
 
-### You Do: Shrimp My Ride (5 min / 3:35)
+### You Do: Big Ol' Twitter Object (15 min / 1:10)
 
-Use the car example above to create your own *Boat*. Give your boat whatever properties and methods you would like it to have - *make it fun*! Your boat is limited only by your imagination!
-
-Try to create at least one method!
-
-#### Bonus!
-
-Yo dog, I heard you like objects, so put an object in your object!
-
-### You Do: Big Ol' Twitter Object (15 min / 3:50)
+> 10 minute exercise. 5 minute review.
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 
@@ -250,11 +246,11 @@ As this course continues you will encounter plenty of Javascript objects in the 
 * In the console, you can examine the tweet object by typing `tweet`. This object represent this [tweet](https://twitter.com/twitterapi/status/210462857140252672) from the [Twitter API](https://twitter.com/TwitterAPI) account.
 * Answer the questions in the page! Test your answers in the console!
 
-## Break (10 min / 4:00)
+## Break (10 min / 1:20)
 
 # Context
 
-## What is Context? (20 min / 4:20)
+## What is Context? (20 min / 1:40)
 
 In Javascript, context tells us where functions are invoked.
 
@@ -265,14 +261,16 @@ Every time a Javascript function is called, a context is determined / set. That 
 We use `this` similar to the way we use pronouns in natural languages like English and French. Say we write:
 
 ```
- “John bites an apple.  The apple tastes good”
+John bites an apple. The apple tastes good
 ```
 
-We could have written this:
+We can also say it another way:
 
 ```
-“John bites an apple.  This tastes good”
+John bites an apple. This tastes good
 ```
+
+What does `this` refer to?` The apple.
 
 In a similar manner, we use the `this` keyword as a replacement for the subject in question.
 
@@ -299,15 +297,18 @@ user.sayName()
 
 ### A Rule of Thumb
 
-In general, `this` is whatever was to the **left of the period** when it was ***called***, unless...
+In general, `this` is probably the **parent** or enclosing item (item being function or object)
 - You're in an event listener function, in which case `this` is the thing that was clicked on.
-- You're in another callback function, in which case `this` is probably the `Window`.
+- You're in another callback function, in which case `this` is probably the `window`.
+- You've used `.bind(newThisValue)` to change the context manually.
 
-If you're ever unsure what `this` is at a given point in your code.
+If you're ever unsure what `this` is at a given point in your code:
 
 ```js
 console.log(this)
 ```
+
+When in doubt, log it out.
 
 ### 'Getting' Properties using `this`
 
@@ -347,7 +348,6 @@ user.isSignedIn // => true
 user.signOut()
 user.isSignedIn // => false
 ```
-
 
 *But what if we want more control?*
 
@@ -409,7 +409,7 @@ user.isSignedIn // => false
 -
 ```
 
-## Other `this` Cases (10 min / 4:30)
+## Other `this` Cases (10 min / 1:50)
 
 ### Events
 
@@ -453,25 +453,9 @@ fruits.forEach(function(){
 })
 ```
 
-#### Aside: `forEach`
+Note that it is very rare to intentionally use `this` to refer to the window object. Usually this happens when we mistakenly use this incorrectly (a very easy/common mistake for new and even experienced JS developers). You can always refer to the window by `window` so using `this` in place of window is confusing.
 
-`forEach` is a Javascript method used to iterate through a collection and do something with each item in it.
-
-```js
-var fruits = ["apples", "bananas", "cherries"]
-
-for(var i = 0; i < fruits.length; i++) {
-  console.log(`Every day I eat two ${fruits[i]}`)
-}
-
-fruits.forEach(function(currentFruit) {
-  console.log(`Every day I eat two ${currentFruit}`)
-})
-```
-
-Note that it is very rare to intentionally use `this` to refer to the window object. Usually this happens when we mistakenly use this incorrectly (a very easy/common mistake for new and even experienced JS developers).
-
-## You Do: Write, Pair, Share (5 min / 4:35)
+## You Do: Write, Pair, Share (5 min / 1:55)
 
 Consider the following example...
 
@@ -512,7 +496,11 @@ var user = {
 user.displayFoods()
 ```
 
-### Answer
+
+<details>
+<summary>
+Answer
+</summary>
 
 In the first case, `this` behaves like we would expect. It references `user` since it's inside a function attached to an `user`.
 
@@ -524,7 +512,9 @@ Note that this issue frequently appears anytime we use a callback / anonymous fu
 * using `forEach()` or other iteration functions
 * for event listeners passed into `someElement.addEventListener()`
 
-## Fixing the Global `this` Gotcha (5 min / 4:40)
+</details>
+
+## Fixing the Global `this` Gotcha (5 min / 2:00)
 
 One trick is to store the `this` you want in another variable, commonly named `self` or `that`.
 
@@ -544,12 +534,48 @@ user.displayFoods()
 ```
 
 * You can also use `.bind(this)` attached to the end of your callback function
-* Use an **Arrow function** as your call back function.  *This preserves the context of* `this`!
 
-## You Do: Test Your Context Knowledge (15 min / 4:55)
+```js
+...
 
-> 10 minutes exercise. 5 minutes review.
+this.favoriteFoods.forEach(function(food) {
+  console.log(`${this.fullName} likes ${food}`)
+}.bind(this))
 
+...
+```
+
+* Use an **Arrow function** as your call back function.  *This preserves the context of* `this`, because it inherits the parent context instead of creating its own new context.
+
+```js
+...
+
+this.favoriteFoods.forEach((food) => {
+  console.log(`${this.fullName} likes ${food}`)
+})
+
+...
+```
+
+## You do: Experiment with this (25 min / 2:25)
+
+Spend a few minutes thinking of a real world item that can be described with different properties. Like a car, animal, or Star Wars spaceship (Star Wars is real). Think of what properties this item might have.
+
+Then, build an object with properties of various types (strings, arrays, nested objects, and functions) that describe this real world thing.
+
+Using `this`, write code that does the following:
+
+* Gets a property from the object (and console logs it)
+* Sets a property from the object
+* Adds a value to an array property
+* Removes a value from an array property
+
+Using `bind`, `self`, and arrow functions, experiment with how the values change. Use the previous code examples for some inspiration, or check out [this review](https://git.generalassemb.ly/dc-wdi-fundamentals/js-context-and-this-review). Take samples from that link, then tweak them and see what happens.
+
+<!-- ## You Do: Test Your Context Knowledge (15 min / 4:55) -->
+
+<!-- > 10 minutes exercise. 5 minutes review. -->
+<!-- 
 ```js
 /*A*/
 var user = {
@@ -620,9 +646,9 @@ When the code above is executed...
     <li>Because `this` is `user`: what was to the left of the period</li>
   </ol>
 
-</details>
+</details> -->
 
-## Review Questions (5 min / 5:00)
+## Review Questions (5 min / 2:25)
 
 1. How are objects like dictionaries?
 2. What's difference between a property and a method?
