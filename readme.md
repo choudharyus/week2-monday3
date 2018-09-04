@@ -43,6 +43,7 @@ var car = {
 
 Objects are a complex data type - sometimes referred to as a dictionary/hash/map.
 * They are a collection of key-value pairs called properties.
+* Key-value pairs are separated by commas.
 * The keys which we explicitly state when defining a property are analogous to our array indexes. They are how we access the associated value (more below).
 
 In the above example, the variable `car` points to an object literal. This particular object has 3 properties: `make`, `model` and `year`.
@@ -57,11 +58,12 @@ Why advantages might there be in storing `car` as an object?
 
 ### You Do: Model WDI Student (5 min / 0:15)
 
-Your goal is to *pseudo-code* an object literal:
+Your goal is to code an object literal:
 
 * In pairs, spend 2 minutes thinking about what attributes a WDI student should have (think of at least 5!).
-* Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table
+* Take 3 minutes to construct your object literal with appropriate key value pairs by drawing it on the table or in your code editor.
 * **Bonus - One key value pair contains an array**
+* **Double bonus - one key value pair contains another object**
 
 ### Interacting with Objects (15 min / 0:30)
 
@@ -90,6 +92,8 @@ car.make = 'Honda',
 car.model = 'Civic',
 car.year = 1997
 ```
+
+> What do you think the function is for creating a new Array, String, or Number?
 
 We will be using *object literal notation* moving forward.  
 
@@ -141,12 +145,15 @@ delete car.smell
 
 Like arrays, you can use a loop to iterate through an object. Say we want to print out all of an object's keys...
 
+This is called a `for in` loop
+
 ```js
 // Iterate through object keys
 for (attribute in car) {
   console.log(attribute)
 }
 ```
+
 > Knowing this, how could we go about getting all the values in an object?
 
 Javascript objects also have native methods that take care of this for us...
