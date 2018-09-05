@@ -564,96 +564,56 @@ this.favoriteFoods.forEach((food) => {
 ...
 ```
 
-## You do: Experiment with this (25 min / 2:25)
+## You do: Object practice (25 min / 2:25)
 
-Spend a few minutes thinking of a real world item that can be described with different properties. Like a car, animal, or Star Wars spaceship (Star Wars is real). Think of what properties this item might have.
+Copy the following code into your code editor. After each comment, write code to perform the action described.
 
-Then, build an object with properties of various types (strings, arrays, nested objects, and functions) that describe this real world thing.
-
-Using `this`, write code that does the following:
-
-* Gets a property from the object (and console logs it)
-* Sets a property from the object
-* Adds a value to an array property
-* Removes a value from an array property
-
-Using `bind`, `self`, and arrow functions, experiment with how the values change. Use the previous code examples for some inspiration, or check out [this review](https://git.generalassemb.ly/dc-wdi-fundamentals/js-context-and-this-review). Take samples from that link, then tweak them and see what happens.
-
-<!-- ## You Do: Test Your Context Knowledge (15 min / 4:55) -->
-
-<!-- > 10 minutes exercise. 5 minutes review. -->
-<!-- 
 ```js
-/*A*/
-var user = {
-  firstName: "john",
-  capitalized: function () {
-    /*B*/
-    return this.firstName.substring(0, 1).toUpperCase() + this.firstName.substring(1)
+let ship = {
+  name: 'Millennium Falcon',
+  speed: 11,
+  crew: ['Han Solo', 'Chewbacca'],
+  passengers: [],
+  famous: true,
+  heardOfIt: function() {
+    console.log("You've never heard of the millennium falcon!?")
+    this.famous = false
   },
-  sayName: function () {
-    /*C*/
-    alert('My name is ' + this.capitalized() + '.')
+  addPassenger: function(passenger) {
+    this.passengers.push(passenger)
+  },
+  removePassenger: function(passenger) {
+    let index = this.passengers.indexOf(passenger);
+    this.passengers.splice(index, 1)
   }
 }
 
-console.log("Welcome, " + user.capitalized() + "!")
+// Console log the name
 
-var buttons = document.getElementsByTagName('button')
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener('click', user.sayName)
-}
+// Change the speed to 13
 
-var inputs = document.getElementsByTagName('input')
-for (let i = 0; i < inputs.length; i++) {
-  inputs[i].addEventListener('keydown', function () {
-    /*D*/
-    console.log('Keypress detected for ' + this.firstName)
-  })
-}
+// Add 2 passengers, "Leia" and "Luke"
 
-user.sayName()
-/*E*/
+// console log whether it's famous or not
+
+// Ask if you've heard of the millenium falcon
+
+// console log if it's still famous
+
+// Remove Leia from the crew
+
+// Add a new property called "color" and set it equal to "beige"
+
+// Add a new property called "missions" and set it equal to an empty object
+
+// Add 3 properties to "missions" 
+  // kashyyk: true
+  // "escape-from-asteroid" : "scary"
+  // "smuggled cargo": ['prisoners', 'stolen goods', 'unobtanium']
+
+// Delete the "famous" property
+
 ```
-
-When the code above is executed...
-
-1. What is the value of `this` at A?
-    - `Window`
-    - `null`
-    - `user`
-2. What is the value of `this` at B?
-    - `Window`
-    - `null`
-    - `user`
-3. Why does the click event throw an error?
-    - Because there aren't parentheses after `user.sayName`
-    - Because `user.sayName` is in an event so `this` is not `user`
-    - Because you can't use `alert` inside a function
-    - Because `user` is not accessible in the scope of the event listener
-4. What is the value of `this` at D?
-    - The `keydown` event
-    - `Window`
-    - The element that was keyed-down upon
-    - `user`
-5. Why does the `user.sayName()` at the end **not** throw an error?
-    - Because `this` is `user`: what was to the left of the period
-    - Because `user` didn't exist until it was created with the click event
-    - Because it is called in the global scope
-
-<details>
-
-  <summary><strong>When you've finished...</strong></summary>
-
-  <ol>
-    <li>`Window`</li>
-    <li>`user`</li>
-    <li>Because `user.sayName` is in an event so `this` is not `user`. In an event listener `this` is always the HTML element that triggered the event.</li>
-    <li>The `input` that was keyed-down upon</li>
-    <li>Because `this` is `user`: what was to the left of the period</li>
-  </ol>
-
-</details> -->
 
 ## Review Questions (5 min / 2:25)
 
