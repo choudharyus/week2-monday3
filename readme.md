@@ -110,7 +110,13 @@ console.log( car.owner )
 
 // NOTE: When accessing properties whose keys have a "-" or space in them, you must use bracket notation.
 console.log( car['tire-type'] )
+
+// NOTE: When accessing properties with a variable, you must also use bracket notation
+function(carProp) {
+  car[carProp]
+}
 ```
+Dot notation is much more common than bracket notation. Why might that be?
 
 #### Update
 
@@ -149,8 +155,8 @@ This is called a `for in` loop
 
 ```js
 // Iterate through object keys
-for (attribute in car) {
-  console.log(attribute)
+for (key in car) {
+  console.log(key)
 }
 ```
 
@@ -162,6 +168,8 @@ Javascript objects also have native methods that take care of this for us...
 Object.keys(car)
 // .values()
 Object.values(car)
+// key-value pairs
+Object.entries(car)
 ```
 
 ### Exercise (10 min / 0:40)
@@ -249,6 +257,7 @@ We've only scratched the surface for objects. We're going to dive much deeper in
 
 As this course continues you will encounter plenty of Javascript objects in the wild. Spend **10 minutes** on the following...
 
+* Familarize yourself with the layout of [Twitter](https://twitter.com/TwitterAPI), pay particular attention to the information displayed in a tweet
 * Go to the [Big Ol' Twitter Object](https://git.generalassemb.ly/pages/dc-wdi-fundamentals/big-ol-twitter-object/) page!
 * In the console, you can examine the tweet object by typing `tweet`. This object represent this [tweet](https://twitter.com/twitterapi/status/210462857140252672) from the [Twitter API](https://twitter.com/TwitterAPI) account.
 * Answer the questions in the page! Test your answers in the console!
