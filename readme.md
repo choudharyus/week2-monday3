@@ -575,54 +575,9 @@ this.favoriteFoods.forEach((food) => {
 
 ## You do: Object practice (25 min / 2:25)
 
-Copy the following code into your code editor. After each comment, write code to perform the action described.
-
-```js
-let ship = {
-  name: 'Millennium Falcon',
-  speed: 11,
-  crew: ['Han Solo', 'Chewbacca'],
-  passengers: [],
-  famous: true,
-  heardOfIt: function() {
-    console.log("You've never heard of the millennium falcon!?")
-    this.famous = false
-  },
-  addPassenger: function(passenger) {
-    this.passengers.push(passenger)
-  },
-  removePassenger: function(passenger) {
-    let index = this.passengers.indexOf(passenger);
-    this.passengers.splice(index, 1)
-  }
-}
-
-// Console log the name
-
-// Change the speed to 13
-
-// Add 2 passengers, "Leia" and "Luke"
-
-// console log whether it's famous or not
-
-// Ask if you've heard of the millenium falcon
-
-// console log if it's still famous
-
-// Remove Leia from the crew
-
-// Add a new property called "color" and set it equal to "beige"
-
-// Add a new property called "missions" and set it equal to an empty object
-
-// Add 3 properties to "missions" 
-  // kashyyk: true
-  // "escape-from-asteroid" : "scary"
-  // "smuggled cargo": ['prisoners', 'stolen goods', 'unobtanium']
-
-// Delete the "famous" property
-
-```
+Work through the prompts in the [ JavaScript Objects Practice
+](https://git.generalassemb.ly/dc-wdi-fundamentals/js-objects-practice)
+repository.
 
 ## Review Questions (5 min / 2:25)
 
