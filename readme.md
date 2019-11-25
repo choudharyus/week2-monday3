@@ -54,7 +54,7 @@ We could store this same information in an array like this...
 let car = ['Honda', 'Civic', 1997]
 ```
 
-Why advantages might there be in storing `car` as an object?
+What advantages might there be in storing `car` as an object?
 
 ### You Do: Model WDI Student (5 min / 0:15)
 
