@@ -2,6 +2,8 @@
 
 ## Learning Objectives
 
+Joes In Class [Repl CodeAlong](https://repl.it/@jkeohan/Intro-To-Objects-Lesson-seir-1118)
+
 ### Objects
 
 - Demonstrate how to create an object using object literal syntax
