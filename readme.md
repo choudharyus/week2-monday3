@@ -30,7 +30,7 @@ In programming, we need a way to contain logic and data about things in the real
 In JavaScript, **objects are collections of properties(key-value pairs)**. We can add, remove, or change these properties as we please. The simplest way to create an object is by using **object literal notation**.
 
 ```js
-var car = {
+let car = {
   make: 'Honda',
   model: 'Civic',
   year: 1997      // Don't add a comma after the last pair!
@@ -51,7 +51,7 @@ In the above example, the variable `car` points to an object literal. This parti
 We could store this same information in an array like this...
 
 ```js
-var car = ['Honda', 'Civic', 1997]
+let car = ['Honda', 'Civic', 1997]
 ```
 
 Why advantages might there be in storing `car` as an object?
@@ -72,7 +72,7 @@ Your goal is to code an object literal:
 We already saved a sample object to a `car` variable. We did this using **object literal notation**.
 
 ```js
-var car = {
+let car = {
   make: 'Honda',
   model: 'Civic',
   year: 1997,
@@ -82,10 +82,10 @@ var car = {
 }
 ```
 
-ASIDE: Another way of creating objects is to use the **Object Constructor method** (`var myObj = new Object()`)
+ASIDE: Another way of creating objects is to use the **Object Constructor method** (`let myObj = new Object()`)
 
 ```js
-var car = new Object()
+let car = new Object()
 
 // then you can populate the object
 car.make = 'Honda',
@@ -191,7 +191,7 @@ Create a variable named `wdiStudent` and assign it to an object literal.
 Object properties aren't limited to simple data types. We can also nest collections inside of collections.
 
 ```js
-var car = {
+let car = {
   make: "Honda",
   model: "Civic",
   year: 1997,
@@ -220,7 +220,7 @@ Methods are functions that are attached to some object.
 
 ```js
 // Our car now has a drive method...
-var car = {
+let car = {
   make: "Honda",
   model: "Civic",
   color: "red",
@@ -295,7 +295,7 @@ In a similar manner, we use the `this` keyword as a replacement for the subject 
 Here's an example of the most common way context is determined for a function. When a method is called on an object, that object becomes the context...
 
 ```js
-var user = {
+let user = {
   fullName: "James Reichard",
   sayName: function(){
     alert(`My name is ${this.fullName}.`)
@@ -329,7 +329,7 @@ When in doubt, log it out.
 ### 'Getting' Properties using `this`
 
 ```js
-var user = {
+let user = {
   fullName: "James Reichard",
   favoriteFood: "Rice pudding",
   sayName: function(){
@@ -348,7 +348,7 @@ user.sayHello() // for this function invocation, `this` is `user`
 This feature allows not just 'getting' property info on objects, but also setting properties. Consider this example:
 
 ```js
-var user = {
+let user = {
   userName: "numbr1rawkr",
   isSignedIn: false,
   signIn: function() {
@@ -370,7 +370,7 @@ user.isSignedIn // => false
 Because we've written a method to set the `isSignedIn` property, we can use that method to provide more control. For example... what if we wanted to check a user's password before letting them sign in?
 
 ```js
-var user = {
+let user = {
   userName: "numbr1rawkr",
   password: "password1234",
   isSignedIn: false,
@@ -397,7 +397,7 @@ user.isSignedIn // => false
 We can also use `this` to reference and call other methods on the object.
 
 ```js
-var user = {
+let user = {
   userName: "numbr1rawkr",
   password: "password1234",
   isSignedIn: false,
@@ -461,7 +461,7 @@ revealThis()
 ### Non-Event Callbacks
 
 ```js
-var fruits = ["apple", "banana", "cantaloupe"]
+let fruits = ["apple", "banana", "cantaloupe"]
 
 fruits.forEach(function(){
   console.log(this)  
@@ -476,7 +476,7 @@ Note that it is very rare to intentionally use `this` to refer to the window obj
 Consider the following example...
 
 ```js
-var user = {
+let user = {
   fullName: "James Reichard",
   favoriteFoods: ["Ramen", "Capn Crunch", "Tacos"],
 
@@ -497,7 +497,7 @@ Using what we know about forEach, what do we expect the output to be?
 Now what about this *slightly* modified example...
 
 ```js
-var user = {
+let user = {
   fullName: "James Reichard",
   favoriteFoods: ["Ramen", "Capn Crunch", "Tacos"],
 
@@ -535,11 +535,11 @@ Note that this issue frequently appears anytime we use a callback / anonymous fu
 One trick is to store the `this` you want in another variable, commonly named `self` or `that`.
 
 ```js
-var user = {
+let user = {
   fullName: "James Reichard",
   favoriteFoods: ["Ramen", "Cap'n Crunch", "Tacos"],
   displayFoods: function() {
-    var self = this
+    let self = this
     this.favoriteFoods.forEach(function(food) {
       console.log(`${self.fullName} likes ${food}`)
     })
@@ -606,7 +606,7 @@ These let you "force" `this` to be something specific.
 ### Bind
 
 ```js
-var user = {
+let user = {
   name: 'James Reichard',
   favoriteFoods: ['Ramen', 'Cap\'n Crunch', 'Tacos'],
   displayFoods: function() {
@@ -632,8 +632,8 @@ function sayHello() {
   console.log(`Hi! My name is ${this.name}`)
 }
 
-var person = {name: 'Manatee the Railyard Toreador'}
-var cat = {name: 'Hobbles McGillicudy'}
+let person = {name: 'Manatee the Railyard Toreador'}
+let cat = {name: 'Hobbles McGillicudy'}
 sayHello.call(person)
 sayHello.call(cat)
 ```
@@ -645,8 +645,8 @@ function sayHello(favColor) {
   console.log(`Hi! My name is ${this.name} and I like ${favColor}`)
 }
 
-var person = {name: 'Manatee the Railyard Toreador'}
-var cat = {name: 'Hobbles McGillicudy'}
+let person = {name: 'Manatee the Railyard Toreador'}
+let cat = {name: 'Hobbles McGillicudy'}
 sayHello.call(person, 'blue')
 sayHello.call(cat, 'peachpuff')
 ```
