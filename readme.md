@@ -492,7 +492,7 @@ let user = {
 user.displayFoods()
 ```
 
-If the Array.forEach() method has not yet been introdued, do not worry.  After a brief explanation/demo you will understand what is happening and will be able to understand the expected the output?
+If the Array.forEach() method has not yet been introduced, do not worry.  After a brief explanation/demo you will understand what is happening and will be able to understand the expected the output?
 
 Now what about this *slightly* modified example...
 
