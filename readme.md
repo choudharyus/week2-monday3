@@ -589,7 +589,7 @@ repository.
 
 ## HW: Calculator
 
-[Javascript Calculator](https://git.generalassemb.ly/dc-wdi-fundamentals/js-calculator)
+[Javascript Calculator](https://git.generalassemb.ly/seir-1118/js-calculator)
 
 ## Next Steps
 
