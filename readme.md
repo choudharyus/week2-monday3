@@ -576,7 +576,7 @@ this.favoriteFoods.forEach((food) => {
 ## You do: Object practice (25 min / 2:25)
 
 Work through the prompts in the [ JavaScript Objects Practice
-](https://git.generalassemb.ly/dc-wdi-fundamentals/js-objects-practice)
+](https://git.generalassemb.ly/seir-1118/js-objects-practice)
 repository.
 
 ## Review Questions (5 min / 2:25)
